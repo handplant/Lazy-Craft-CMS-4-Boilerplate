@@ -1,0 +1,230 @@
+{% extends "_layouts/base" %}
+
+{% block main %}
+  <header class="pb-10 blocks blocks--transparent">
+    <div class="{{ style.blocks.md }}">
+      <h1 class="text-3xl font-bold tracking-tight text-center text-gray-900 dark:text-gray-100 sm:text-4xl">
+        Tailwind Forms
+      </h1>
+
+      <div class="{{ style.richText.intro }} text-center text-gray-500 mt-6">
+        This form does not have any function.
+      </div>
+    </div>
+  </header>
+  <section class="blocks blocks--transparent">
+    <div class="{{ style.blocks.lg }}">
+      <form class="space-y-8 divide-y divide-gray-200 dark:divide-gray-600">
+        <div class="space-y-8 divide-y divide-gray-200 dark:divide-gray-600">
+          <div>
+            <div>
+              <h3 class="text-lg font-medium leading-6">
+                Profile
+              </h3>
+
+              <div>
+                <label for="about" class="block text-sm font-medium text-gray-700 dark:text-gray-400">About</label>
+                <div class="mt-1">
+                  <textarea id="about" name="about" rows="3" class="form-textarea"></textarea>
+                </div>
+                <p class="mt-2 text-sm text-gray-500">
+                  Write a few sentences about yourself.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-8">
+            <div>
+              <h3 class="text-lg font-medium leading-6">
+                Personal Information
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">
+                Use a permanent address where you can receive mail.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 mt-6 gap-y-6 gap-x-4 sm:grid-cols-6">
+              <div class="sm:col-span-3">
+                <label for="first-name" class="block text-sm font-medium text-gray-700 dark:text-gray-400">
+                  First name
+                </label>
+                <div class="mt-1">
+                  <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="form-input" />
+                </div>
+              </div>
+
+              <div class="sm:col-span-3">
+                <label for="last-name" class="block text-sm font-medium text-gray-700 dark:text-gray-400">
+                  Last name
+                </label>
+                <div class="mt-1">
+                  <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="form-input" />
+                </div>
+              </div>
+
+              <div class="sm:col-span-4">
+                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-400">
+                  Email address
+                </label>
+                <div class="mt-1">
+                  <input id="email" name="email" type="email" autocomplete="email" class="form-input" />
+                </div>
+              </div>
+
+              <div class="sm:col-span-3">
+                <label for="country" class="block text-sm font-medium text-gray-700 dark:text-gray-400">Country</label>
+                <div class="mt-1">
+                  <select id="country" name="country" autocomplete="country-name" class="form-select">
+                    <option>
+                      United States
+                    </option>
+                    <option>
+                      Germany
+                    </option>
+                    <option>
+                      Alderaan
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="sm:col-span-6">
+                <label for="street-address" class="block text-sm font-medium text-gray-700 dark:text-gray-400">
+                  Street address
+                </label>
+                <div class="mt-1">
+                  <input type="text"
+                    name="street-address"
+                    id="street-address"
+                    autocomplete="street-address"
+                    class="form-input" />
+                </div>
+              </div>
+
+              <div class="sm:col-span-2">
+                <label for="city" class="block text-sm font-medium text-gray-700 dark:text-gray-400">City</label>
+                <div class="mt-1">
+                  <input type="text" name="city" id="city" autocomplete="address-level2" class="form-input" />
+                </div>
+              </div>
+
+              <div class="sm:col-span-2">
+                <label for="region" class="block text-sm font-medium text-gray-700 dark:text-gray-400">
+                  State / Province
+                </label>
+                <div class="mt-1">
+                  <input type="text" name="region" id="region" autocomplete="address-level1" class="form-input" />
+                </div>
+              </div>
+
+              <div class="sm:col-span-2">
+                <label for="postal-code" class="block text-sm font-medium text-gray-700 dark:text-gray-400">
+                  ZIP / Postal code
+                </label>
+                <div class="mt-1">
+                  <input type="text"
+                    name="postal-code"
+                    id="postal-code"
+                    autocomplete="postal-code"
+                    class="form-input" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-8">
+            <div>
+              <h3 class="text-lg font-medium leading-6">
+                Notifications
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">
+                We'll always let you know about important changes, but you pick what else you want to hear about.
+              </p>
+            </div>
+            <div class="mt-6">
+              <fieldset>
+                <legend class="sr-only">
+                  By Email
+                </legend>
+                <div class="text-base font-medium" aria-hidden="true">
+                  By Email
+                </div>
+                <div class="mt-4 space-y-4">
+                  <div class="relative flex items-start">
+                    <div class="flex items-center h-5">
+                      <input id="comments" name="comments" type="checkbox" class="form-checkbox" />
+                    </div>
+                    <div class="ml-3 text-sm">
+                      <label for="comments" class="font-medium text-gray-700 dark:text-gray-400">Comments</label>
+                      <p class="text-gray-500">
+                        Get notified when someones posts a comment on a posting.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="relative flex items-start">
+                    <div class="flex items-center h-5">
+                      <input id="candidates" name="candidates" type="checkbox" class="form-checkbox" />
+                    </div>
+                    <div class="ml-3 text-sm">
+                      <label for="candidates" class="font-medium text-gray-700 dark:text-gray-400">Candidates</label>
+                      <p class="text-gray-500">
+                        Get notified when a candidate applies for a job.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="relative flex items-start">
+                    <div class="flex items-center h-5">
+                      <input id="offers" name="offers" type="checkbox" class="form-checkbox" />
+                    </div>
+                    <div class="ml-3 text-sm">
+                      <label for="offers" class="font-medium text-gray-700 dark:text-gray-400">Offers</label>
+                      <p class="text-gray-500">
+                        Get notified when a candidate accepts or rejects an offer.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="mt-6">
+                <legend class="text-base font-medium contents">
+                  Push Notifications
+                </legend>
+                <p class="text-sm text-gray-500">
+                  These are delivered via SMS to your mobile phone.
+                </p>
+                <div class="mt-4 space-y-4">
+                  <div class="flex items-center">
+                    <input id="push-everything" name="push-notifications" type="radio" class="form-radio" />
+                    <label for="push-everything"
+                      class="block ml-3 text-sm font-medium text-gray-700 dark:text-gray-400">
+                      Everything
+                    </label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="push-email" name="push-notifications" type="radio" class="form-radio" />
+                    <label for="push-email" class="block ml-3 text-sm font-medium text-gray-700 dark:text-gray-400">
+                      Same as email
+                    </label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="push-nothing" name="push-notifications" type="radio" class="form-radio" />
+                    <label for="push-nothing" class="block ml-3 text-sm font-medium text-gray-700 dark:text-gray-400">
+                      No push notifications
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-5">
+          <div class="flex justify-end space-x-3">
+            <button type="button" class="btn btn--outline">Cancel</button>
+            <button type="submit" class="btn">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock %}

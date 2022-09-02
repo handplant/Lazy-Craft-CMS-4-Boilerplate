@@ -1,0 +1,25 @@
+{% extends "_layouts/base" %}
+
+{% block main %}
+  {% cache using key "entry__home" %}
+    {% do craft.app.elements.eagerLoadElements(
+      className(entry),
+      [entry],
+      [''] | merge(eagerLoading.blocks ??? '')
+    ) %}
+
+    {% set blocks = entry.blocks.collect() %}
+
+    {% include "_partials/pageHero.twig" %}
+
+    {% include "_partials/newsCounter" %}
+
+    <div class="{{ style.blocks.md }}">
+      {{ sprig("_sprig/search") }}
+    </div>
+
+    {% include "_builders" with {
+      blocks: blocks
+    } %}
+  {% endcache %}
+{% endblock %}

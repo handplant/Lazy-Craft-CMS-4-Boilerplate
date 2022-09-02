@@ -1,0 +1,124 @@
+{# Set Defaults #}
+{% set defaults = {
+  data: {
+    info: null,
+    entries: null,
+    entryUri: null,
+    page: 0,
+    count: 0,
+    offset: 0,
+    limit: 0
+  }
+} %}
+
+{# Merge props #}
+{% set props = {
+  data: data is defined ? defaults.data|merge(data) : defaults.data
+} %}
+
+{% if props.data.info and props.data.entries and props.data.page and props.data.info.totalPages > 1 %}
+  <nav class="flex items-center justify-center my-12 space-x-2 dark:text-gray-900">
+    {% if props.data.entries %}
+      {% if props.data.page > 1 %}
+        {# Decrements `page` by 1 and pushes the new value into the URL on click #}
+        <button class="inline-flex items-center justify-center w-12 h-12 text-white rounded-full bg-beta"
+          aria-label="prev"
+          sprig
+          s-val:page="{{ props.data.page - 1 }}"
+          s-push-url="/{{ props.data.entryUri }}/{{ craft.app.config.general.pageTrigger }}{{ props.data.page - 1 }}">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+      {% endif %}
+
+      <div class="flex items-center justify-center space-x-2">
+        {% if props.data.info.totalPages <= 6 %}
+          {% for i in 1..props.data.info.totalPages %}
+            {% if i == props.data.page %}
+              <span class="inline-flex items-center justify-center w-12 h-12 text-base font-bold bg-gray-300 border-2 border-gray-300 rounded-full dark:border-gray-500 dark:bg-gray-500 text-gray">
+                {{ i }}
+              </span>
+            {% else %}
+              {# Refreshes the component and pushes the new value into the URL #}
+              <a class="inline-flex items-center justify-center w-12 h-12 text-base font-bold bg-white border-2 border-gray-300 rounded-full cursor-pointer text-gray hover:bg-gray hover:text-beta"
+                sprig
+                s-val:page="{{ i }}"
+                s-push-url="/{{ props.data.entryUri }}/{{ craft.app.config.general.pageTrigger }}{{ i }}">
+                {{ i }}
+              </a>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          {% set range = props.data.info.getRange(props.data.info.currentPage - 2, props.data.info.currentPage + 2) %}
+          {% if (range|first) != 1 %}
+            <a class="inline-flex items-center justify-center w-12 h-12 text-base font-bold bg-white border-2 border-transparent rounded-full cursor-pointer text-gray hover:text-beta"
+              sprig
+              s-val:page="1"
+              s-push-url="/{{ props.data.entryUri }}/{{ craft.app.config.general.pageTrigger }}1">
+              1
+            </a>
+            {% if (range|first) > 2 %}
+              ...
+            {% endif %}
+          {% endif %}
+          {% for i in (range|first)..(range|last) %}
+            {% if i == props.data.page %}
+              <span class="justify-center inline-block w-12 h-12 text-base font-bold text-center bg-white border-2 rounded-full border-primary text-gray">
+                {{ i }}
+              </span>
+            {% else %}
+              {# Refreshes the component and pushes the new value into the URL #}
+              <a class="inline-flex items-center justify-center w-12 h-12 text-base font-bold bg-white border-2 border-transparent rounded-full cursor-pointer text-gray hover:text-beta"
+                sprig
+                s-val:page="{{ i }}"
+                s-push-url="/{{ props.data.entryUri }}/{{ craft.app.config.general.pageTrigger }}{{ i }}">
+                {{ i }}
+              </a>
+            {% endif %}
+          {% endfor %}
+          {% if (range|last) < props.data.info.totalPages - 2 %}
+            ...
+            <a class="inline-flex items-center justify-center w-12 h-12 text-base font-bold bg-white border-2 border-transparent rounded-full cursor-pointer text-gray hover:text-beta"
+              sprig
+              s-val:page="{{ props.data.info.totalPages }}"
+              s-push-url="/{{ props.data.entryUri }}/{{ craft.app.config.general.pageTrigger }}{{
+              props.data.info.totalPages
+              }}">
+              {{ props.data.info.totalPages }}
+            </a>
+          {% endif %}
+        {% endif %}
+      </div>
+
+      {% if props.data.page < props.data.info.totalPages %}
+        {# Increments `page` by 1 and pushes the new value into the URL on click #}
+        <button class="inline-flex items-center justify-center w-12 h-12 text-white rounded-full bg-beta"
+          aria-label="next"
+          sprig
+          s-val:page="{{ props.data.page + 1 }}"
+          s-push-url="/{{ props.data.entryUri }}/{{ craft.app.config.general.pageTrigger }}{{ props.data.page + 1 }}">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+      {% endif %}
+    {% endif %}
+
+    {% if sprig.isRequest %}
+      <script>
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth', });
+      </script>
+    {% endif %}
+  </nav>
+{% endif %}

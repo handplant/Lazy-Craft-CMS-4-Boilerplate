@@ -1,0 +1,78 @@
+field: 95152ca3-0b9f-4d46-9349-cd429a4e43ea # Blocks
+fieldLayouts:
+  bcb7dc73-5349-4d1d-b1da-4ab4a2bd9cbc:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 832e06b7-23a1-43f1-9195-d9799aeeb7a2 # Cards
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8eeba3fb-0203-441b-9165-be9a9646a265
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f9e2dc02-aa9c-4e56-a878-86d69833281f
+        userCondition: null
+fields:
+  832e06b7-23a1-43f1-9195-d9799aeeb7a2: # Cards
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cards
+    instructions: null
+    name: Cards
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 514576593
+      columns:
+        __assoc__:
+          -
+            - 1e3282cf-612c-4d04-b4f6-02ec0ef60e78 # Title
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 5b54e8f6-48f6-47a6-812e-7799a1e2f264 # Image
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - d6d68433-69a8-40e3-b902-a9aa2a507b07 # Text
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - ce845487-a637-4e39-a2cf-8e7fbdb0b3e2 # Button
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_3_cards}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: blockCards
+name: Cards
+sortOrder: 3

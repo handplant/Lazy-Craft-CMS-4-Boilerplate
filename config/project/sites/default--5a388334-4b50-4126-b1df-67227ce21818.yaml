@@ -1,0 +1,9 @@
+baseUrl: $SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en
+name: $SITE_NAME
+primary: true
+siteGroup: 4706b3bf-052e-4604-bbf9-0095d00f790a # Boilerplate
+sortOrder: 1

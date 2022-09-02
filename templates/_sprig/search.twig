@@ -1,0 +1,50 @@
+{% set query = query ?? "" %}
+<div class="relative">
+  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+    <svg class="w-5 h-5 text-gray-400"
+      x-description="Heroicon name: mini/magnifying-glass"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true">
+      <path fill-rule="evenodd"
+        d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </div>
+  <input sprig
+    s-trigger="keyup changed delay:300ms"
+    s-replace="#results"
+    type="text"
+    name="query"
+    placeholder="search! for example: blog or news"
+    class="block w-full py-3 pl-10 pr-3 leading-5 placeholder-gray-500 bg-white border border-gray-300 rounded-md shadow-md dark:placeholder-gray-400 dark:border-gray-900 dark:bg-gray-500 dark:text-white focus:border-alpha-500 focus:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-alpha-500"
+    value="{{ query }}" />
+</div>
+
+<div id="results">
+  {% if query %}
+    {% set entries = craft.entries.section(["news", "pages"]).search(query).all() %}
+    <ul class="p-6 mt-4 space-y-4 bg-white rounded-md shadow-md dark:bg-black">
+      {% if entries %}
+        {% for entry in entries %}
+          <li>
+            <a class="inline-flex items-center text-beta dark:text-beta-300 hover:underline" href="{{ entry.url }}">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5 mr-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+              {{ entry.title }} <span class="text-gray-500">&nbsp;/{{ entry.section }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      {% else %}
+        <li class="flex items-center justify-center"><span class="inline-flex mr-2 text-5xl">😱</span>no result</li>
+      {% endif %}
+    </ul>
+  {% endif %}
+</div>

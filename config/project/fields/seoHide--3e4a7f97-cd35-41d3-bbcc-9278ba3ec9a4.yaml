@@ -1,0 +1,14 @@
+columnSuffix: egoeywxo
+contentColumnType: boolean
+fieldGroup: c885c595-cebb-48a3-8d9a-be401441ce25 # Seo
+handle: seoHide
+instructions: null
+name: 'Seo - Hide'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

@@ -1,0 +1,78 @@
+fieldLayouts:
+  010bc8cb-3cdb-488d-8fe9-e2532302a7c8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 3cea6e1b-6092-4763-8577-cdf6db1f8269
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: true
+            required: false
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 0aa8a569-940a-4cdf-b959-2b01b91a26bb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3ef6cb83-7d47-42d9-85eb-38072acb046f # Copyright
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 994d18f7-5c20-4959-b778-6a4b1e0671dd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 36223ef9-2885-4c59-8db1-9aab26e6c932
+        userCondition: null
+fs: images
+handle: images
+name: Images
+sortOrder: 1
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

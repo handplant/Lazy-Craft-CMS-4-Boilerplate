@@ -1,0 +1,46 @@
+{# Set Defaults #}
+{% set defaults = {
+  data: {
+    info: null,
+    entries: null,
+    entryUri: null,
+    page: 0,
+    count: 0,
+    offset: 0,
+    limit: 0,
+    label: "Load more",
+    "sprig-target": "#results",
+    "sprig-select": "#results .sprig-card",
+    "sprig-swap": "beforeend"
+  }
+} %}
+
+{# Merge props #}
+{% set props = {
+  data: data is defined ? defaults.data|merge(data) : defaults.data
+} %}
+
+<div>
+  {% if props.data.count > props.data.offset + (props.data.entries|length) %}
+    <div class="my-12 text-center">
+      <button id="load-more-oob"
+        sprig
+        s-target="{{props.data["sprig-target"]}}"
+        s-swap="{{props.data["sprig-swap"]}}"
+        s-select="{{props.data["sprig-select"]}}"
+        {# s-indicator="#spinner" #}
+        s-val:offset="{{ props.data.offset + props.data.limit }}"
+        class="btn btn--beta"
+        {{ sprig.trigger == "load-more-oob" ? 's-swap-oob="true"' }}>
+        <span>{{props.data.label}}</span>
+        <svg class="w-5 h-5 ml-3 text-white htmx-indicator animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+      </button>
+    </div>
+  {% else %}
+    {# Swaps the button out-of-band with a dummy button that is hidden #}
+    <button id="load-more-oob" s-swap-oob="true" style="display: none"></button>
+  {% endif %}
+</div>

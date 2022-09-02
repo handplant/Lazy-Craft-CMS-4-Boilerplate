@@ -1,0 +1,39 @@
+{# Set Defaults #}
+{% set defaults = {
+  data: {
+    type: "alpha",
+    size: "base",
+    link: null
+  },
+  variants: {
+    type: {
+      alpha: "btn",
+      beta: "btn btn--beta",
+      outlined: "btn btn--outline"
+    },
+    size: {
+      sm: "btn--sm",
+      base: "",
+      lg: "btn--lg"
+    }
+  }
+} %}
+
+{# >>> Merge data / classes / variants (optional) #}
+{% set props = {
+  data: data is defined and data is iterable ? defaults.data|merge(data) : defaults.data,
+  variants: defaults.variants
+} %}
+
+{% if props.data.link %}
+  {% if props.data.link is not string and props.data.link.getUrl() %}
+    {{
+      props.data.link.getLink({
+        class: props.variants.type[props.data.type] ~ " " ~ props.variants.size[props.data.size]
+      })
+    }}
+  {% endif %}
+  {% if props.data.link is string %}
+    <a href="{{ props.data.link }}" class="{{ props.variants.type[props.data.type] ~ " " ~ props.variants.size[props.data.size] }}">Read more</a>
+  {% endif %}
+{% endif %}

@@ -1,0 +1,14 @@
+columnSuffix: glpwwufj
+contentColumnType: boolean
+fieldGroup: 30cbaa4c-aacc-4b92-a838-0dbd76852ac4 # News
+handle: newsPagination
+instructions: null
+name: 'News - Pagination'
+searchable: false
+settings:
+  default: false
+  offLabel: loadmore
+  onLabel: pages
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

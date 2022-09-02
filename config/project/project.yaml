@@ -1,0 +1,170 @@
+dateModified: 1662112394
+elementSources:
+  craft\elements\Entry:
+    -
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - section
+        - type
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
+    -
+      key: singles
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      key: 'section:3a7b0cff-9784-4566-82c7-8058d29810aa' # News
+      type: native
+    -
+      heading: Structures
+      type: heading
+    -
+      disabled: false
+      key: 'section:585e4f7d-8f46-4f8c-b63b-80b4fc80b08b' # Navigation
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - author
+        - link
+        - _childme_addChild
+      type: native
+    -
+      disabled: false
+      key: 'section:11598707-6309-4f50-946c-335777106fb3' # Pages
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - author
+        - link
+        - type
+      type: native
+email:
+  fromEmail: $SYSTEM_MAIL
+  fromName: $SITE_NAME
+  replyToEmail: $REPLY_MAIL
+  template: ''
+  transportSettings:
+    command: '/usr/sbin/sendmail -bs'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: $SITE_IMAGES_PATH
+    type: craft\fs\Local
+    url: $SITE_IMAGES_URL
+meta:
+  __names__:
+    1e3282cf-612c-4d04-b4f6-02ec0ef60e78: Title # Title
+    3a7b0cff-9784-4566-82c7-8058d29810aa: News # News
+    3c6fb20b-47c2-4dad-bdb3-f488a2681c30: 'Video URL' # Video URL
+    3c3695a6-a175-41c7-b8be-c1f97a2dbfb9: 'Preview Image' # Preview Image
+    3dad681d-2b1c-4bed-a738-132a827d76ef: 'Page - News' # Page - News
+    3e4a7f97-cd35-41d3-bbcc-9278ba3ec9a4: 'Seo - Hide' # Seo - Hide
+    3ef6cb83-7d47-42d9-85eb-38072acb046f: Copyright # Copyright
+    5a388334-4b50-4126-b1df-67227ce21818: $SITE_NAME # $SITE_NAME
+    5b1d9baa-f1c8-4462-8c42-dc7b3ebc3a4e: Images # Images
+    5b54e8f6-48f6-47a6-812e-7799a1e2f264: Image # Image
+    5e67ea4e-bf13-4ee7-8e50-c46b0cd8e13a: Images # Images
+    6d26ee64-a749-4528-b206-f147f95fd95e: 'Navigation - LInk' # Navigation - LInk
+    6e7472e7-c63c-4447-a563-9988d447b8a5: Teaser # Teaser
+    8fe74ac6-deb5-488c-ab7b-b527dc0bc970: 'Seo - Title' # Seo - Title
+    9b27ba6a-ef2d-40c5-a5b8-26472818eb49: Items # Items
+    13a95918-f4a2-4301-9a25-4816bccc6376: 'Preview Text' # Preview Text
+    24af7e7f-3b66-4f65-b596-3c1c1bc4161f: Home # Home
+    24e9e482-974e-4f43-b2cb-d6058deb865a: Headline # Headline
+    30cbaa4c-aacc-4b92-a838-0dbd76852ac4: News # News
+    48f1991a-af03-4694-bbe3-4f2c50d13fb6: Default # Default
+    67c8cc98-0009-41f4-a0f1-4dc3470536a2: Navigation # Navigation
+    68ab1eed-de3b-472f-8465-7338807960b1: Page # Page
+    76d94634-01f8-4535-b4bf-e2870ae8f25d: 'Public Schema' # Public Schema
+    84aef975-f98d-44f6-8450-a081ab798069: Common # Common
+    87c31d25-eaea-4be8-b67a-935d2aea4afe: Date # Date
+    87d03d4b-eb91-48eb-9519-a716b2145a99: Text # Text
+    90dc105e-bfad-485e-9427-e8c8b36de281: Image # Image
+    134b242c-7379-4178-95a6-a85b049de389: Accordion # Accordion
+    536ad9d9-6bf9-4746-b4ca-a39315a51f69: Text # Text
+    585e4f7d-8f46-4f8c-b63b-80b4fc80b08b: Navigation # Navigation
+    817fa701-2e9f-40bc-a4e2-80c921c789ed: Button # Button
+    832e06b7-23a1-43f1-9195-d9799aeeb7a2: Cards # Cards
+    4033c796-d853-4f95-aa8b-4d77d55e9384: Image # Image
+    4706b3bf-052e-4604-bbf9-0095d00f790a: Boilerplate # Boilerplate
+    5099f057-fd49-431c-a6fa-ddd239eec776: 'News - Category' # News - Category
+    6357cf83-498b-401f-8405-7af8e6be8196: 'Seo - Image' # Seo - Image
+    13641e3b-9587-44c7-ab67-b3be0050d7f4: Text # Text
+    33331ab1-c592-4cbc-b1ab-dcbe07b37d60: 'News Entry' # News Entry
+    79831db1-8d94-4794-b29a-56322152f0b7: Caption # Caption
+    95152ca3-0b9f-4d46-9349-cd429a4e43ea: Blocks # Blocks
+    11598707-6309-4f50-946c-335777106fb3: Pages # Pages
+    15051784-2fca-4ad6-adf4-37742ec0e0eb: Link # Link
+    75495664-81c9-48dd-b3eb-0f1f2c24fa80: Images # Images
+    b43961b1-2d19-4986-a7d4-86afb4c236e5: Text # Text
+    bd292d9f-94ad-4da3-828b-56cd7c480502: 'Seo - Description' # Seo - Description
+    c7b5353f-42f4-4c4f-b9bf-dbc22fc2ef9a: Cards # Cards
+    c30f2fb0-6ccd-47ea-a9cb-f96fb72f5f23: 'News - Pagination' # News - Pagination
+    c885c595-cebb-48a3-8d9a-be401441ce25: Seo # Seo
+    c4569bc2-0faa-4452-82f9-3344e307871e: Tags # Tags
+    ce845487-a637-4e39-a2cf-8e7fbdb0b3e2: Button # Button
+    d6d68433-69a8-40e3-b902-a9aa2a507b07: Text # Text
+    d71a42f3-d21a-46fc-9d2d-3d62f1fb78da: News # News
+    d50431c7-2899-4e67-98c4-0edd8caa49ec: Builders # Builders
+    e3cc550c-fc28-4ee9-9be6-7ef998d866a9: Teaser # Teaser
+    e32e036d-dfaf-4b3d-8960-a0cdbbffa97b: 'Image Right' # Image Right
+    faa291e4-344c-4482-a847-09ab3f85bee6: Home # Home
+    fdded62b-4ab7-45a4-890f-871e91405d57: Headline # Headline
+    ffe769e6-5c30-464b-a3fd-048e7701e1f0: Geoman # Geoman
+plugins:
+  elements-panel:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  empty-coalesce:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  mix:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  seomate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+system:
+  edition: pro
+  live: true
+  name: $SITE_NAME
+  retryDuration: null
+  schemaVersion: 4.0.0.9
+  timeZone: Europe/Berlin
+users:
+  allowPublicRegistration: false
+  deactivateByDefault: false
+  defaultGroup: ''
+  photoSubpath: null
+  photoVolumeUid: 5b1d9baa-f1c8-4462-8c42-dc7b3ebc3a4e # Images
+  requireEmailVerification: true
+  validateOnPublicRegistration: false

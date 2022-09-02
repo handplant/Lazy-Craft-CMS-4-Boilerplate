@@ -1,0 +1,64 @@
+field: 95152ca3-0b9f-4d46-9349-cd429a4e43ea # Blocks
+fieldLayouts:
+  a95573cf-79c3-4343-8a0b-061f870e41f9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 9b27ba6a-ef2d-40c5-a5b8-26472818eb49 # Items
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 00de6b4c-4c0c-4a48-ac10-a88f41e65fa2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 42861931-b74a-48f1-b81d-81a9fb0f726f
+        userCondition: null
+fields:
+  9b27ba6a-ef2d-40c5-a5b8-26472818eb49: # Items
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: items
+    instructions: null
+    name: Items
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1465139655
+      columns:
+        __assoc__:
+          -
+            - 24e9e482-974e-4f43-b2cb-d6058deb865a # Headline
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - b43961b1-2d19-4986-a7d4-86afb4c236e5 # Text
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_1_items}}'
+      fieldLayout: matrix
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: blockAccordion
+name: Accordion
+sortOrder: 5

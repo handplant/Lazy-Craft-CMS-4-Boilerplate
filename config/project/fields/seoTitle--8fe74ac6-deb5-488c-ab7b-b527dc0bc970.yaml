@@ -1,0 +1,19 @@
+columnSuffix: anevscpu
+contentColumnType: string(240)
+fieldGroup: c885c595-cebb-48a3-8d9a-be401441ce25 # Seo
+handle: seoTitle
+instructions: null
+name: 'Seo - Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 60
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

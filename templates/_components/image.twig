@@ -1,0 +1,94 @@
+{# Set Defaults #}
+{% set defaults = {
+  data: {
+    image: null,
+    sizes: [640, 1024, 1600],
+    lazy: true,
+    objectFit: false,
+    ratio: null,
+    class: '',
+  }
+} %}
+
+{# Merge props #}
+{% set props = {
+  data: data is defined ? defaults.data|merge(data) : defaults.data
+} %}
+
+{% if props.data.image %}
+  {% set image = props.data.image %}
+
+  {% set svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' ~ props.data.image.width ~ '" height="'
+    ~ props.data.image.height
+    ~ ('"/>'|url_encode)
+  %}
+  {% set src = "data:image/svg+xml;charset=utf-8," ~ svg %}
+
+  {% set srcset = [] %}
+  {% set srcsetWebpg = [] %}
+
+  {% for outputWidth in props.data.sizes %}
+    {% if outputWidth <= image.width %}
+        {% if props.data.ratio %}
+            {% set ratio = props.data.ratio|split(":") %}
+
+            {% set transformOptions = {
+                width: outputWidth,
+                height: outputWidth * (ratio|last) / (ratio|first)
+            } %}
+        {% else %}
+            {% set transformOptions = {
+                width: outputWidth
+            } %}
+        {% endif %}
+
+        {% set srcset = srcset|merge([image.url(transformOptions) ~ " " ~ outputWidth ~ "w"]) %}
+        {% if craft.app.images.supportsWebP %}
+          {% set srcsetWebpg = srcsetWebpg|merge([image.url(transformOptions|merge({format: 'webp'})) ~ " " ~ outputWidth ~ "w"]) %}
+        {% endif %}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {# output img #}
+  <picture class="{{ props.data.objectFit ? 'flex w-full h-full' : '' }}">
+    {% if craft.app.images.supportsWebP %}
+      <source type="image/webp" class="{{ props.data.class }} {{ props.data.lazy ? 'lazyload' }}" {{ props.data.lazy ? 'loading="lazy"' }} data-sizes="auto" alt="{{ props.data.image.alt }}"
+        {% if props.data.lazy %}
+          data-src="{{src}}" data-srcset="{{- srcsetWebpg|join(", ") -}}"
+        {% else %}
+            src="{{src}}" srcset="{{- srcsetWebpg|join(", ") -}}"
+        {% endif %}
+        {% if props.data.objectFit %}
+          style="object-fit: cover; object-position: {{ props.data.image.getFocalpoint('asCss') ?? '50% 50%' }};"
+          height="100%" width="100%"
+        {% endif %}
+      />
+    {% endif %}
+
+    <source type="image/jpeg" class="{{ props.data.class }} {{ props.data.lazy ? 'lazyload' }}" {{ props.data.lazy ? 'loading="lazy"' }} data-sizes="auto" alt="{{ props.data.image.alt }}"
+      {% if props.data.lazy %}
+        data-src="{{src}}" data-srcset="{{- srcset|join(", ") -}}"
+      {% else %}
+        src="{{src}}" srcset="{{- srcset|join(", ") -}}"
+      {% endif %}
+      {% if props.data.objectFit %}
+        style="object-fit: cover; object-position: {{ props.data.image.getFocalpoint('asCss') ?? '50% 50%' }};"
+        height="100%" width="100%"
+      {% endif %}
+    />
+
+    <img class="{{ props.data.class }} {{ props.data.lazy ? 'lazyload' }}" {{ props.data.lazy ? 'loading="lazy"' }} data-sizes="auto" alt="{{ props.data.image.alt }}"
+      {% if props.data.lazy %}
+        data-src="{{src}}" data-srcset="{{- srcset|join(", ") -}}"
+      {% else %}
+          src="{{src}}" srcset="{{- srcset|join(", ") -}}"
+      {% endif %}
+      {% if props.data.objectFit %}
+          style="object-fit: cover; object-position: {{ props.data.image.getFocalpoint('asCss') ?? '50% 50%' }};"
+          height="100%" width="100%"
+      {% endif %}
+    />
+  </picture>
+
+  {# <noscript><img src="{{props.data.image.url}}" alt="{{props.data.image.alt}}" /></noscript> #}
+{% endif %}

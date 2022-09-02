@@ -1,0 +1,25 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 30cbaa4c-aacc-4b92-a838-0dbd76852ac4 # News
+handle: newsRelatedCat
+instructions: null
+name: 'News - Category'
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: 1
+  localizeRelations: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  source: 'group:d71a42f3-d21a-46fc-9d2d-3d62f1fb78da' # News
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

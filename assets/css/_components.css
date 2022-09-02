@@ -1,0 +1,103 @@
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-3 rounded-md border border-transparent bg-alpha-600 px-4 py-2 text-base font-medium text-white no-underline shadow-sm hover:bg-alpha-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-alpha-500 focus:ring-offset-2;
+  }
+
+  .btn--beta {
+    @apply bg-beta-600 text-white hover:bg-beta-700 hover:text-white focus:ring-beta-500;
+  }
+
+  .btn--outline {
+    @apply border-gray-200 bg-white text-gray-900 hover:bg-gray-50 hover:text-gray-900 focus:ring-gray-100 group-hover:bg-gray-50 dark:border-gray-700 dark:bg-black  dark:text-white dark:hover:bg-gray-700;
+  }
+
+  .btn--sm {
+    @apply px-2.5 py-1.5 text-xs;
+  }
+
+  .btn--lg {
+    @apply px-6 py-3 text-lg;
+  }
+}
+
+/* Builder */
+
+.blocks {
+  @apply relative py-16;
+}
+.blocks--invert {
+  @apply bg-gray-100;
+}
+.blocks--transparent + .blocks--transparent {
+  @apply pt-0;
+}
+.blocks--invert + .blocks--invert {
+  @apply pt-0;
+}
+.blocks--dark + .blocks--dark {
+  @apply pt-0;
+}
+
+/* Tailwind forms */
+
+.form-input,
+.form-select,
+.form-multiselect,
+.form-textarea {
+  @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-alpha-500 focus:ring-alpha-500 dark:text-gray-900 sm:text-sm;
+}
+
+.form-checkbox {
+  @apply h-4 w-4 rounded border-gray-300 text-alpha-600 focus:ring-alpha-500;
+}
+
+.form-radio {
+  @apply h-4 w-4 border-gray-300 text-alpha-600 focus:ring-alpha-500;
+}
+
+/* Sprig Indicator */
+
+.htmx-indicator {
+  @apply hidden;
+}
+
+.htmx-request .htmx-indicator {
+  @apply block;
+}
+
+.htmx-loader {
+  @apply hidden;
+}
+.htmx-request .htmx-loader {
+  display: inline;
+}
+.htmx-request.htmx-loader {
+  display: inline;
+}
+
+/* Lazysizes */
+
+.lazyload,
+.lazyloading {
+  @apply opacity-0 transition-all duration-500;
+}
+
+figure .lazyload,
+figure .lazyloading,
+picture .lazyload,
+picture .lazyloading {
+  @apply scale-105;
+}
+
+.lazyloaded {
+  @apply opacity-100;
+}
+
+figure .lazyloaded,
+picture .lazyloaded {
+  @apply scale-100;
+}
+
+.lazypreload {
+  @apply opacity-100;
+}

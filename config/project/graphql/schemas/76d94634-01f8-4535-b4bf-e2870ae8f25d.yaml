@@ -1,0 +1,6 @@
+isPublic: true
+name: 'Public Schema'
+scope:
+  - 'sites.5a388334-4b50-4126-b1df-67227ce21818:read' # $SITE_NAME
+  - 'sections.3a7b0cff-9784-4566-82c7-8058d29810aa:read' # News
+  - 'entrytypes.33331ab1-c592-4cbc-b1ab-dcbe07b37d60:read' # News Entry

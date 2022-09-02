@@ -1,0 +1,18 @@
+<section class="blocks blocks--transparent">
+  <div class="{{ style.blocks["xl"] }}">
+    <div class="grid gap-6 lg:grid-cols-3">
+      {% for card in self.cards.with({
+        with: ["image"]
+      }).collect() %}
+        {% include "_components/card.twig" with {
+          data: {
+            headline: card.headline,
+            text: card.text,
+            image: card.image.collect().first() ?? null,
+            button: card.button
+          }
+        } only %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

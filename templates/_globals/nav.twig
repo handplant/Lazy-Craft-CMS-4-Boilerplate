@@ -1,0 +1,68 @@
+{% set navItems = craft.entries.section("navigation").level(1).collect() %}
+
+<nav class="fixed inset-x-0 top-0 z-10 w-full h-16 bg-white shadow dark:bg-black" x-data="{ showMobileNav: false }">
+  <div class="flex justify-between h-full max-w-screen-lg px-4 mx-auto">
+    <a href="/" class="inline-flex items-center flex-shrink-0 text-xl">
+        {{svg('@webroot/assets/GM-1500.svg')|attr({class: 'h-16 w-16'})}}
+    </a>
+    {# Hamburger #}
+    <button
+        x-transition.opacity.duration.250ms
+        x-on:click="showMobileNav = true"
+        class="flex items-center md:hidden group" type="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+        >
+        <span class="text-4xl">
+          ✊
+        </span>
+    </button>
+
+    {# Desktop Nav #}
+    <div class="hidden space-x-10 md:flex">
+      {% include "_components/navigation.twig" with {
+        data: {
+          items: navItems ?? null,
+        }
+      } only %}
+      {% include "_partials/themeToggle.twig" %}
+    </div>
+
+    {# Mobile Nav #}
+    <div x-cloak x-show="showMobileNav"
+     x-transition:enter="transition-transform transition-opacity ease-out duration-200"
+     x-transition:enter-start="opacity-0 transform translate-y-0"
+     x-transition:enter-end="opacity-100 transform"
+     x-transition:leave="transition ease-in duration-200"
+     x-transition:leave-end="opacity-0 transform translate-y-0"
+     class="fixed inset-0 z-20 w-full md:hidden bg-black/20 backdrop-blur-sm"></div>
+      <div x-cloak class="fixed inset-y-0 right-0 z-30 overflow-y-auto bg-white shadow-lg dark:bg-black w-72 md:hidden sm:w-96"
+          x-show="showMobileNav"
+          x-transition:enter="transition-transform transition-opacity ease-out duration-200"
+          x-transition:enter-start="opacity-0 transform translate-y-0"
+          x-transition:enter-end="opacity-100 transform"
+          x-transition:leave="transition ease-in duration-200"
+          x-transition:leave-end="opacity-0 transform translate-y-0"
+          aria-haspopup="true"
+          aria-expanded="true"
+          x-on:click.away="showMobileNav = false"
+      >
+        <div class="flex items-center justify-end h-16 px-4">
+          {% include "_partials/themeToggle.twig" %}
+          <button class="inline-flex ml-3" x-on:click="showMobileNav = false">
+            <span class="text-4xl">
+              🖐
+            </span>
+          </button>
+        </div>
+        {% include "_components/navigation.twig" with {
+          data: {
+            items: navItems ?? null,
+            classWrapper: "p-8 space-y-4",
+            mobile: true
+          }
+        } only %}
+      </div>
+    </div>
+  </div>
+</nav>

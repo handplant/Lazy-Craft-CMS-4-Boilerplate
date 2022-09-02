@@ -1,0 +1,57 @@
+{# Set Defaults #}
+{% set defaults = {
+  data: {
+    headline: "",
+    text: "",
+    image: null,
+    imageRight: false,
+    button: null,
+    classWrapper: "flex flex-wrap items-center sm:flex-nowrap",
+    classImage: "w-full sm:w-1/2",
+    classText: "w-full sm:w-1/2",
+    classRichText: "prose dark:prose-invert",
+    aspectW: "4",
+    aspectH: "3"
+  }
+} %}
+
+{# Merge props #}
+{% set props = {
+  data: data is defined ? defaults.data|merge(data) : defaults.data
+} %}
+
+{% set imagePosition = "sm:order-1" %}
+{% set textPosition = " sm:order-2 sm:pl-6 md:pl-12" %}
+
+{% if props.data.imageRight %}
+  {% set imagePosition = "sm:order-2" %}
+  {% set textPosition = "sm:order-1 sm:pr-6 md:pr-12" %}
+{% endif %}
+
+<div class="{{ props.data.classWrapper }}">
+  <div class="{{ props.data.classImage }} {{ imagePosition }}">
+    <div class="aspect-[4/3] mb-4">
+      {% include "_components/image.twig" with {
+        data: {
+          image: props.data.image,
+          sizes: [640],
+          ratio: "4:3",
+          class: "rounded-lg"
+        }
+      } only %}
+    </div>
+  </div>
+  <div class="{{ props.data.classText }} {{ textPosition }}">
+    <div class="{{ props.data.classRichText }} {{ props.data.button.getUrl() ? "mb-6" }}">
+      <h3>
+        {{ props.data.headline }}
+      </h3>
+      {{ props.data.text }}
+    </div>
+    {% include "_components/button.twig" with {
+      data: {
+        link: props.data.button
+      }
+    } only %}
+  </div>
+</div>

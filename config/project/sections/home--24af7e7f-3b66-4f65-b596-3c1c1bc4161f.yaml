@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: home
+name: Home
+propagationMethod: all
+siteSettings:
+  5a388334-4b50-4126-b1df-67227ce21818: # $SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _entries/home.twig
+    uriFormat: __home__
+type: single

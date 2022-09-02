@@ -1,0 +1,138 @@
+fieldLayouts:
+  4f559138-6ade-41b9-a66b-11347e49824d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: de950abb-816c-441f-b76d-438b05ded840
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e3cc550c-fc28-4ee9-9be6-7ef998d866a9 # Teaser
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e1bd765c-0105-4fa8-b6ff-7c7dd46797d4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c4569bc2-0faa-4452-82f9-3344e307871e # Tags
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 535b197b-81fe-47e3-ae68-07c074eaede8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: da5ee01b-3675-4323-9bf9-39e07a800df7
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 95152ca3-0b9f-4d46-9349-cd429a4e43ea # Blocks
+            instructions: null
+            label: Builder
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 87c195bb-e058-4b65-a850-6fd06e63dd12
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a2fd613a-5bc7-43a1-b8e8-6f79461c1d4d
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 8fe74ac6-deb5-488c-ab7b-b527dc0bc970 # Seo - Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 80213a15-ecf8-441c-bf2e-337c01f7c29e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bd292d9f-94ad-4da3-828b-56cd7c480502 # Seo - Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 59b8e6fe-1fd2-4a97-8a00-722b31266709
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6357cf83-498b-401f-8405-7af8e6be8196 # Seo - Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 39983bc1-f370-47b2-a141-05df150bdec3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3e4a7f97-cd35-41d3-bbcc-9278ba3ec9a4 # Seo - Hide
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 478b357c-b118-4e1b-b289-57684f921e84
+            userCondition: null
+            warning: null
+            width: 100
+        name: Seo
+        uid: d5773a95-0ca9-4224-a791-e2642d5ffc84
+        userCondition: null
+handle: page
+hasTitleField: true
+name: Page
+section: 11598707-6309-4f50-946c-335777106fb3 # Pages
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

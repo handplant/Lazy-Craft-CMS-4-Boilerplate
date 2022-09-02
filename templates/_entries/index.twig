@@ -1,0 +1,11 @@
+{{
+  include(
+    [
+      "_entries/" ~ entry.section.handle ~ "/" ~ entry.type.handle,
+      "_entries/" ~ entry.section.handle ~ "/default",
+      "_errors/404"
+    ],
+    {},
+    withContext = true
+  )
+}}

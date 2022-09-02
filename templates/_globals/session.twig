@@ -1,0 +1,22 @@
+{% set sessionVar = "Hello World" %}
+{% set baseUrl = alias("@web") ~ "/" %}
+{% set style = {
+  richText: {
+    default: "prose lg:prose-lg prose-ci dark:prose-invert",
+    intro: "prose-lg lg:prose-xl prose-ci dark:prose-invert",
+    sm: "prose prose-ci dark:prose-invert"
+  },
+  blocks: {
+    "2xl": "max-w-screen-2xl mx-auto px-4",
+    xl: "max-w-screen-xl mx-auto px-4",
+    lg: "max-w-screen-lg mx-auto px-4",
+    md: "max-w-screen-md mx-auto px-4"
+  }
+} %}
+{% set eagerLoading = {
+  blocks: ["blocks", "blocks.blockImages:images", "blocks.blockTeaser:image"]
+} %}
+
+{% block layout %}
+
+{% endblock %}

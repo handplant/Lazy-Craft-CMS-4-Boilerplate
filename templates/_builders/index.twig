@@ -1,0 +1,8 @@
+{% if blocks|length %}
+  {% for block in blocks %}
+    {% include "_builders/" ~ block.type.handle with {
+      self: block ??? null,
+      index: loop.index
+    } %}
+  {% endfor %}
+{% endif %}

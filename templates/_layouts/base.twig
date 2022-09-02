@@ -1,0 +1,31 @@
+{% extends "_globals/session" %}
+
+{%- block layout -%}
+  <!DOCTYPE html>
+  <html lang="{{ craft.app.language|slice(0, 2) }}"
+        x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
+        x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
+        x-bind:class="{ 'dark': darkMode }">
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      {% hook "seomateMeta" %}
+      {% if entry is defined and entry.seoHide %}
+        <meta name="robots" content="noindex" />
+      {% endif %}
+
+      {% include "_globals/fonts" %}
+      {% include "_globals/favicons" %}
+      {% include "_globals/styles" %}
+    </head>
+    <body class="h-full mt-16 font-sans text-base antialiased text-gray-900 bg-gray-100 dark:text-white dark:bg-gray-900">
+      {% include "_globals/nav" %}
+      {% block main %}
+
+      {% endblock %}
+      {% include "_globals/footer" %}
+      {% include "_globals/scripts" %}
+    </body>
+  </html>
+{%- endblock -%}

@@ -1,0 +1,218 @@
+field: 832e06b7-23a1-43f1-9195-d9799aeeb7a2 # Cards
+fieldLayouts:
+  c9d9a027-e844-46e6-84ef-ffd7c014e236:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1e3282cf-612c-4d04-b4f6-02ec0ef60e78 # Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be111342-f779-4c51-af3b-d0349528b35b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5b54e8f6-48f6-47a6-812e-7799a1e2f264 # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1df3c47a-a865-4fa7-ab29-a8ee7f2eef3c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d6d68433-69a8-40e3-b902-a9aa2a507b07 # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f22cb133-474d-49ec-b255-33e6d923aa4b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ce845487-a637-4e39-a2cf-8e7fbdb0b3e2 # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b0afb400-f0ff-4d8f-b84b-4702b836a44f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a2dac253-b10e-4412-b435-46c9e53b46ea
+        userCondition: null
+fields:
+  1e3282cf-612c-4d04-b4f6-02ec0ef60e78: # Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: headline
+    instructions: null
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  5b54e8f6-48f6-47a6-812e-7799a1e2f264: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:5b1d9baa-f1c8-4462-8c42-dc7b3ebc3a4e' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:5b1d9baa-f1c8-4462-8c42-dc7b3ebc3a4e' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources:
+        - 'volume:5b1d9baa-f1c8-4462-8c42-dc7b3ebc3a4e' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  ce845487-a637-4e39-a2cf-8e7fbdb0b3e2: # Button
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: button
+    instructions: null
+    name: Button
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: true
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  d6d68433-69a8-40e3-b902-a9aa2a507b07: # Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field

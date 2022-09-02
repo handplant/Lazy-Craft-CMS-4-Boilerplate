@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+handle: navigation
+name: Navigation
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  5a388334-4b50-4126-b1df-67227ce21818: # $SITE_NAME
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 2
+  uid: a9dff11f-1bc9-431f-869c-ab22dbe8b580
+type: structure

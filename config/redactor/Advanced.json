@@ -1,0 +1,9 @@
+{
+  "buttons": ["html", "undo", "redo", "format", "bold", "italic", "lists", "link", "file", "line"],
+  "formatting": ["h2", "h3", "h4", "p"],
+  "pasteImages": false,
+  "pasteLinks": true,
+  "linkNewTab": true,
+  "toolbar": true,
+  "toolbarFixed": true
+}

@@ -1,0 +1,126 @@
+fieldLayouts:
+  dc507b33-5479-436f-b484-4ad0811d8b73:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 16aa8946-f2d1-4850-a767-d3063da7e0b4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e3cc550c-fc28-4ee9-9be6-7ef998d866a9 # Teaser
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 49685c62-edc3-43fc-972b-c7231b2cdd3d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: a9717584-91b9-411f-b32f-2cef03af691e
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 95152ca3-0b9f-4d46-9349-cd429a4e43ea # Blocks
+            instructions: null
+            label: Builder
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c7e419f6-4297-4c15-89c8-a8bb901056a5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a7dc373f-041f-4799-bbde-e8f7af3f1ec0
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 8fe74ac6-deb5-488c-ab7b-b527dc0bc970 # Seo - Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 972214c5-c400-41d9-a3ba-87c82dfeb061
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bd292d9f-94ad-4da3-828b-56cd7c480502 # Seo - Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 06c0bccf-7655-49e4-844b-f61b2cdce8cc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6357cf83-498b-401f-8405-7af8e6be8196 # Seo - Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1af14217-6074-4277-b2e9-092043510418
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3e4a7f97-cd35-41d3-bbcc-9278ba3ec9a4 # Seo - Hide
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7718b5b-b187-4cb0-b59b-23f79a64ca88
+            userCondition: null
+            warning: null
+            width: 100
+        name: Seo
+        uid: 5a25976d-7052-48aa-bae8-dff7bb62c1d5
+        userCondition: null
+handle: home
+hasTitleField: true
+name: Home
+section: 24af7e7f-3b66-4f65-b596-3c1c1bc4161f # Home
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

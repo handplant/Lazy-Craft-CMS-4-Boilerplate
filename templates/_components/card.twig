@@ -1,0 +1,69 @@
+{# Set Defaults #}
+{% set defaults = {
+  data: {
+    headline: "",
+    topline: "",
+    text: "",
+    date: null,
+    image: null,
+    button: null,
+    classWrapper: "flex flex-col bg-white dark:bg-black rounded-lg shadow-lg overflow-hidden",
+    classContent: "",
+    classImage: "",
+    classText: "p-6",
+    classRichText: "prose dark:prose-invert",
+    classButton: "px-6 pb-6 mt-auto",
+    aspectW: "16",
+    aspectH: "9"
+  }
+} %}
+
+{# Merge props #}
+{% set props = {
+  data: data is defined ? defaults.data|merge(data) : defaults.data
+} %}
+
+<div class="sprig-card {{ props.data.classWrapper }}">
+  <div class="{{ props.data.classContent }}">
+    {% if props.data.image %}
+      <div class="{{ props.data.classImage }} aspect-[{{ props.data.aspectW }}/{{ props.data.aspectH }}]">
+        {% include "_components/image.twig" with {
+          data: {
+            image: props.data.image,
+            sizes: [640],
+            ratio: props.data.aspectW ~ ":" ~ props.data.aspectH
+          }
+        } only %}
+      </div>
+    {% endif %}
+    <div class="{{ props.data.classText }}">
+      {% if props.data.topline or props.data.date %}
+        <div class="flex items-center justify-between pb-2 mb-4 border-b dark:border-gray-800">
+          {% if props.data.topline %}
+            <p class="text-beta dark:text-beta-400">
+              {{ props.data.topline }}
+            </p>
+          {% endif %}
+          {% if props.data.date %}
+            <p class="mb-0 text-sm text-gray-400">
+              {{ props.data.date|date("M d, Y") }}
+            </p>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="{{ props.data.classRichText }}">
+        <h3>
+          {{ props.data.headline }}
+        </h3>
+        {{ props.data.text }}
+      </div>
+    </div>
+  </div>
+  <div class="{{ props.data.classButton }}">
+    {% include "_components/button.twig" with {
+      data: {
+        link: props.data.button
+      }
+    } only %}
+  </div>
+</div>
