@@ -1,6 +1,6 @@
 {
   "require": {
-    "craftcms/cms": "4.2.3",
+    "craftcms/cms": "4.2.5.2",
     "craftcms/redactor": "3.0.2",
     "misterbk/mix": "1.6.0",
     "nystudio107/craft-emptycoalesce": "4.0.0",
@@ -8,7 +8,7 @@
     "putyourlightson/craft-sprig": "2.1.0",
     "sebastianlenz/linkfield": "2.1.4",
     "vaersaagod/seomate": "2.0.3",
-    "verbb/super-table": "3.0.0",
+    "verbb/super-table": "3.0.1",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
