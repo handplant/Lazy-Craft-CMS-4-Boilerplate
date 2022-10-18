@@ -1,4 +1,8 @@
 {
+  "named": "handplant/lazy-craft-cms-4-boilerplate",
+  "description": "Simple lazy responsive starter kit for CraftCMS 4 Projects.",
+  "version": "1.0.0",
+  "type": "project",
   "require": {
     "craftcms/cms": "4.2.5.2",
     "craftcms/redactor": "3.0.2",
