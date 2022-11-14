@@ -61,7 +61,7 @@
               {% if subelement and subelement.uri == craft.app.request.pathInfo %}
                 {% set subclass = subclass ~ " " ~ props.data.classSubLinkActive %}
               {% endif %}
-              <li class="class="{{ props.data.classSubItem }}"">
+              <li class="{{ props.data.classSubItem }}">
                 {{
                   subitem.navigationLink.getLink({
                     class: subclass
