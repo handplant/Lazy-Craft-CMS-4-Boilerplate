@@ -5,15 +5,15 @@
   "type": "project",
   "license": "MIT",
   "require": {
-    "craftcms/cms": "4.3.3",
-    "craftcms/redactor": "3.0.2",
+    "craftcms/cms": "4.3.8.2",
+    "craftcms/redactor": "3.0.3",
     "misterbk/mix": "1.6.0",
     "nystudio107/craft-emptycoalesce": "4.0.0",
     "putyourlightson/craft-elements-panel": "2.0.0",
-    "putyourlightson/craft-sprig": "2.3.0",
-    "sebastianlenz/linkfield": "2.1.4",
+    "putyourlightson/craft-sprig": "2.5.1",
+    "sebastianlenz/linkfield": "2.1.5",
     "vaersaagod/seomate": "2.0.3",
-    "verbb/super-table": "3.0.5",
+    "verbb/super-table": "3.0.7",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
