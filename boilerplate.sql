@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.31, for macos12.6 (arm64)
+-- MySQL dump 10.13  Distrib 8.0.33, for macos13.3 (arm64)
 --
 -- Host: localhost    Database: boilerplate
 -- ------------------------------------------------------
--- Server version	8.0.31
+-- Server version	8.0.33
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -1793,12 +1793,12 @@ CREATE TABLE `widgets` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-03 13:04:19
--- MySQL dump 10.13  Distrib 8.0.31, for macos12.6 (arm64)
+-- Dump completed on 2023-06-19 12:29:45
+-- MySQL dump 10.13  Distrib 8.0.33, for macos13.3 (arm64)
 --
 -- Host: localhost    Database: boilerplate
 -- ------------------------------------------------------
--- Server version	8.0.31
+-- Server version	8.0.33
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -2207,7 +2207,7 @@ commit;
 LOCK TABLES `plugins` WRITE;
 /*!40000 ALTER TABLE `plugins` DISABLE KEYS */;
 set autocommit=0;
-INSERT INTO `plugins` VALUES (5,'empty-coalesce','4.0.0','1.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-04-03 11:03:57','33d28ff2-940c-470a-bea9-2b296b7bddee'),(7,'mix','1.6.0','1.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-04-03 11:03:57','f7325c73-f9b8-4768-a725-9801508a041c'),(8,'redactor','3.0.4','2.3.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-04-03 11:04:09','f0cf9eeb-faf1-4081-9313-5b1c2ac5e8ea'),(9,'seomate','2.1.1','1.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-04-03 11:04:09','475dbdd4-2a80-4049-8ca7-a0a862fadf1e'),(11,'sprig','2.5.1','1.0.1','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-04-03 11:03:57','be68e102-398b-455a-8ddc-2c2e242e3049'),(12,'super-table','3.0.8.1','3.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-04-03 11:04:09','8a29a512-a8e8-450e-9378-36bfbd617527'),(13,'typedlinkfield','2.1.5','2.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-04-03 11:03:57','f12d75aa-e3f1-43da-99ab-fde4a113b422'),(14,'elements-panel','2.0.0','1.0.0','2022-09-02 09:53:14','2022-09-02 09:53:14','2023-04-03 11:03:57','2a6df948-53e2-43c4-a3de-939bb9891860');
+INSERT INTO `plugins` VALUES (5,'empty-coalesce','4.0.0','1.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-04-03 11:03:57','33d28ff2-940c-470a-bea9-2b296b7bddee'),(7,'mix','1.6.0','1.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-04-03 11:03:57','f7325c73-f9b8-4768-a725-9801508a041c'),(8,'redactor','3.0.4','2.3.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-04-03 11:04:09','f0cf9eeb-faf1-4081-9313-5b1c2ac5e8ea'),(9,'seomate','2.1.2','1.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-06-19 10:29:29','475dbdd4-2a80-4049-8ca7-a0a862fadf1e'),(11,'sprig','2.6.2','1.0.1','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-06-19 10:29:29','be68e102-398b-455a-8ddc-2c2e242e3049'),(12,'super-table','3.0.9','3.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-06-19 10:29:29','8a29a512-a8e8-450e-9378-36bfbd617527'),(13,'typedlinkfield','2.1.5','2.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-04-03 11:03:57','f12d75aa-e3f1-43da-99ab-fde4a113b422'),(14,'elements-panel','2.0.0','1.0.0','2022-09-02 09:53:14','2022-09-02 09:53:14','2023-04-03 11:03:57','2a6df948-53e2-43c4-a3de-939bb9891860');
 /*!40000 ALTER TABLE `plugins` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -2609,4 +2609,4 @@ commit;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-03 13:04:19
+-- Dump completed on 2023-06-19 12:29:45
