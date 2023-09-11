@@ -6,10 +6,7 @@
 
 Simple lazy responsive starter kit for CraftCMS 4 Projects.
 
-
 <img src="web/assets/screenshot-light.png"  width="50%"/><img src="web/assets/screenshot-dark.png"  width="50%"/>
-
-
 
 ## Requirements
 
@@ -25,54 +22,54 @@ Use the boilerplate.sql as starting point. Create a new database with the settin
 
 ## Development
 
-* `npm run watch` start local dev server
-* `npm run production` build
+- `npm run dev` start local dev server
+- `npm run build` build
 
-Check `webpack.mix.js` and [Laravel Mix Documentation](https://laravel-mix.com/) for more Informations!
+Check `Vite.js` and [vitejs Documentation](https://vitejs.dev/) for more Informations!
 
 ## Whats inside?
 
 ###Stack
 
-* [Craft CMS](https://craftcms.com/)
-* [Laravel Mix](https://laravel-mix.com/)
-* [TailwindCSS](https://tailwindcss.com/)
-* [Alpine.js](https://alpinejs.dev/) 
-* [Sprig/htmx](https://htmx.org/) 
-* [GraphQL](https://graphql.org/)
+- [Craft CMS](https://craftcms.com/)
+- [Vite.js](https://vitejs.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Alpine.js](https://alpinejs.dev/)
+- [Sprig/htmx](https://htmx.org/)
+- [GraphQL](https://graphql.org/)
 
 ###Plugins (free)
 
-* [Empty Coalesce](https://plugins.craftcms.com/empty-coalesce?craft4)
-* [Elements Panel](https://plugins.craftcms.com/elements-panel?craft4)
-* [Mix](https://plugins.craftcms.com/mix?craft4) 
-* [Redactor](https://plugins.craftcms.com/redactor?craft4) 
-* [Seomate](https://plugins.craftcms.com/seomate?craft4) 
-* [Sprig](https://plugins.craftcms.com/sprig?craft4) 
-* [Super Table](https://plugins.craftcms.com/super-table?craft4) 
-* [Typed link field](https://plugins.craftcms.com/typedlinkfield?craft4) 
+- [Empty Coalesce](https://plugins.craftcms.com/empty-coalesce?craft4)
+- [Elements Panel](https://plugins.craftcms.com/elements-panel?craft4)
+- [Vite](https://plugins.craftcms.com/vite?craft4)
+- [Redactor](https://plugins.craftcms.com/redactor?craft4)
+- [Seomate](https://plugins.craftcms.com/seomate?craft4)
+- [Sprig](https://plugins.craftcms.com/sprig?craft4)
+- [Super Table](https://plugins.craftcms.com/super-table?craft4)
+- [Typed link field](https://plugins.craftcms.com/typedlinkfield?craft4)
 
 ###Sections
 
-* Single - Home
-* Structure - Pages (Page Default, Page News Index)
-* Structure - Navigation
-* Channel - News
+- Single - Home
+- Structure - Pages (Page Default, Page News Index)
+- Structure - Navigation
+- Channel - News
 
 ###Categories
 
-* News Categories
+- News Categories
 
 ###Highlights
 
-* ContentBuilder (Text, Images, Cards, Teaser, Accordion)
-* Native Image Transform Twig Component with webp, lazyloading and srcset support
-* Sprig/htmx news pagination (pages or loadmore button)
-* Simple Alpinejs/GraphQL News Counter
-* Darkmode
-* EagerLoading
-* Tailwind Form Style Testpage
-* Seo Fields
+- ContentBuilder (Text, Images, Cards, Teaser, Accordion)
+- Native Image Transform Twig Component with webp, lazyloading and srcset support
+- Sprig/htmx news pagination (pages or loadmore button)
+- Simple Alpinejs/GraphQL News Counter
+- Darkmode
+- EagerLoading
+- Tailwind Form Style Testpage
+- Seo Fields
 
 ## Do you need more than a lazy boilerplate?
 

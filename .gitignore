@@ -15,6 +15,7 @@
 # ASSETS
 # /web/uploads/* -> ignore this on production
 /web/cpresources/*
+/web/cache/*
 
 # LOGS
 logs

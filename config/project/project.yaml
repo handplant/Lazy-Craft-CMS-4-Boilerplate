@@ -1,4 +1,4 @@
-dateModified: 1680519849
+dateModified: 1694168545
 elementSources:
   craft\elements\Entry:
     -
@@ -129,10 +129,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  mix:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   redactor:
     edition: standard
     enabled: true
@@ -153,12 +149,16 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true
   name: $SITE_NAME
   retryDuration: null
-  schemaVersion: 4.4.0.4
+  schemaVersion: 4.5.3.0
   timeZone: Europe/Berlin
 users:
   allowPublicRegistration: false

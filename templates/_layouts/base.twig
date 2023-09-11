@@ -14,10 +14,15 @@
       {% if entry is defined and entry.seoHide %}
         <meta name="robots" content="noindex" />
       {% endif %}
+      <style>
+        [x-cloak] { display: none; }
+      </style>
 
-      {% include "_globals/fonts" %}
+      {# {{ craft.vite.script('src/js/app.js') }} #}
+      <link rel="stylesheet" href="{{ craft.vite.entry("app.css") }}" />
+
       {% include "_globals/favicons" %}
-      {% include "_globals/styles" %}
+      {% include "_globals/fonts" %}
     </head>
     <body class="h-full mt-16 font-sans text-base antialiased text-gray-900 bg-gray-100 dark:text-white dark:bg-gray-900">
       {% include "_globals/nav" %}
@@ -25,7 +30,8 @@
 
       {% endblock %}
       {% include "_globals/footer" %}
-      {% include "_globals/scripts" %}
+      {{ craft.vite.register("src/js/app.js") }}
+      {{ sprig.script }}
     </body>
   </html>
 {%- endblock -%}

@@ -5,10 +5,11 @@
   "type": "project",
   "license": "MIT",
   "require": {
-    "craftcms/cms": "4.4.14",
+    "craftcms/cms": "4.5.3",
     "craftcms/redactor": "3.0.4",
     "misterbk/mix": "1.6.0",
     "nystudio107/craft-emptycoalesce": "4.0.0",
+    "nystudio107/craft-vite": "4.0.6",
     "putyourlightson/craft-elements-panel": "2.0.0",
     "putyourlightson/craft-sprig": "2.6.2",
     "sebastianlenz/linkfield": "2.1.5",
@@ -63,5 +64,12 @@
     "pre-install-cmd": "@pre-craft-update",
     "post-update-cmd": "@post-craft-update",
     "post-install-cmd": "@post-craft-update"
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.craftcms.com",
+      "canonical": false
+    }
+  ]
 }

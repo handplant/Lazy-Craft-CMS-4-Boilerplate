@@ -14,8 +14,8 @@ module.exports = {
     },
   ],
   plugins: [
-    "./node_modules/prettier-plugin-tailwindcss",
-    "./node_modules/prettier-plugin-twig-melody",
+    'prettier-plugin-twig-melody',
+    ['prettier-plugin-tailwindcss', { resolveConfig: true }], // Use resolveConfig option
   ],
   tailwindConfig: "./tailwind.config.js",
   twigPrintWidth: 120,

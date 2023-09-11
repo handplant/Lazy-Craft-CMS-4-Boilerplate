@@ -1,3 +1,5 @@
+import '../css/app.css';
+
 import 'lazysizes';
 import Alpine from 'alpinejs';
 
