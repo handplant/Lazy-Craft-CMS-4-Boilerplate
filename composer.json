@@ -5,7 +5,7 @@
   "type": "project",
   "license": "MIT",
   "require": {
-    "craftcms/cms": "4.5.3",
+    "craftcms/cms": "4.5.5",
     "craftcms/redactor": "3.0.4",
     "misterbk/mix": "1.6.0",
     "nystudio107/craft-emptycoalesce": "4.0.0",

@@ -1822,7 +1822,7 @@ CREATE TABLE `widgets` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-09-11 11:00:21
+-- Dump completed on 2023-09-25 12:31:36
 -- MySQL dump 10.13  Distrib 8.0.33, for macos13.3 (arm64)
 --
 -- Host: localhost    Database: boilerplate
@@ -2140,7 +2140,7 @@ commit;
 LOCK TABLES `gqltokens` WRITE;
 /*!40000 ALTER TABLE `gqltokens` DISABLE KEYS */;
 set autocommit=0;
-INSERT INTO `gqltokens` VALUES (1,'Public Token','__PUBLIC__',1,NULL,'2023-09-11 08:56:26',NULL,'2022-09-01 14:16:21','2023-09-11 08:56:26','bda84672-2395-4578-bd39-ca46748a13fb');
+INSERT INTO `gqltokens` VALUES (1,'Public Token','__PUBLIC__',1,NULL,'2023-09-11 09:14:17',NULL,'2022-09-01 14:16:21','2023-09-11 09:14:17','bda84672-2395-4578-bd39-ca46748a13fb');
 /*!40000 ALTER TABLE `gqltokens` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -2649,4 +2649,4 @@ commit;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-09-11 11:00:22
+-- Dump completed on 2023-09-25 12:31:36
