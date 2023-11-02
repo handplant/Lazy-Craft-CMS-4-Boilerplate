@@ -1,5 +1,5 @@
 <header class="pb-10 blocks blocks--transparent">
-  <div class="{{ style.blocks.md }}">
+  <div class="{{ _globals.get('blocksMedium') }}">
     {% if entry.newsRelatedCat and entry.newsRelatedCat.collect().first() %}
       <p class="mb-2 text-center text-beta dark:text-beta-400">
         {{ entry.newsRelatedCat.collect().first() }}
@@ -17,7 +17,7 @@
     </h1>
 
     {% if entry.teaser %}
-      <div class="{{ style.richText.intro }} text-center text-gray-500 dark:text-gray-300  mt-6">
+      <div class="{{ _globals.get('richTextIntro') }} text-center text-gray-500 dark:text-gray-300  mt-6">
         {{ entry.teaser }}
       </div>
     {% endif %}

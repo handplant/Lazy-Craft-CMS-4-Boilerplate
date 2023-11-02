@@ -11,7 +11,7 @@
             </button>
           </h2>
           <div x-show="open == true" x-collapse="" class="h-auto">
-            <div class="px-6 pb-4 {{ style.richText.default }}">
+            <div class="px-6 pb-4 {{ _globals.get('richText') }}">
               {{ item.text }}
             </div>
           </div>

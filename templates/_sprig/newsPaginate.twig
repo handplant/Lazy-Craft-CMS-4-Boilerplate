@@ -27,7 +27,7 @@
   {% set pageInfo = sprig.paginate(entryQuery, page) %}
   {% set entries = pageInfo.pageResults %}
 
-  <div class="{{ style.blocks.xl }}">
+  <div class="{{ containerClass }}">
     <div class="max-w-screen-md px-4 pt-4 mx-auto mb-16 text-center xl:max-w-screen-lg">
       <div class="inline-flex items-center space-x-4">
         <select sprig
@@ -78,7 +78,7 @@
             date: item.date,
             image: item.image.collect().first() ?? null,
             button: item.getUrl(),
-            classRichText: style.richText.sm
+            classRichText: textClass
           }
         } only %}
       {% endfor %}
