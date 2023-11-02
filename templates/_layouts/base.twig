@@ -17,10 +17,7 @@
       <style>
         [x-cloak] { display: none; }
       </style>
-
-      {# {{ craft.vite.script('src/js/app.js') }} #}
       <link rel="stylesheet" href="{{ craft.vite.entry("app.css") }}" />
-
       {% include "_globals/favicons" %}
       {% include "_globals/fonts" %}
     </head>
@@ -31,7 +28,7 @@
       {% endblock %}
       {% include "_globals/footer" %}
       {{ craft.vite.register("src/js/app.js") }}
-      {{ sprig.script }}
+      {% do sprig.registerScript %}
     </body>
   </html>
 {%- endblock -%}

@@ -29,7 +29,7 @@ Check `Vite.js` and [vitejs Documentation](https://vitejs.dev/) for more Informa
 
 ## Whats inside?
 
-###Stack
+### Stack
 
 - [Craft CMS](https://craftcms.com/)
 - [Vite.js](https://vitejs.dev/)
@@ -38,9 +38,8 @@ Check `Vite.js` and [vitejs Documentation](https://vitejs.dev/) for more Informa
 - [Sprig/htmx](https://htmx.org/)
 - [GraphQL](https://graphql.org/)
 
-###Plugins (free)
+### Plugins (free)
 
-- [Empty Coalesce](https://plugins.craftcms.com/empty-coalesce?craft4)
 - [Elements Panel](https://plugins.craftcms.com/elements-panel?craft4)
 - [Vite](https://plugins.craftcms.com/vite?craft4)
 - [Redactor](https://plugins.craftcms.com/redactor?craft4)
@@ -49,18 +48,19 @@ Check `Vite.js` and [vitejs Documentation](https://vitejs.dev/) for more Informa
 - [Super Table](https://plugins.craftcms.com/super-table?craft4)
 - [Typed link field](https://plugins.craftcms.com/typedlinkfield?craft4)
 
-###Sections
+### Sections
 
 - Single - Home
 - Structure - Pages (Page Default, Page News Index)
 - Structure - Navigation
 - Channel - News
+- Channel - Categories
 
-###Categories
+### ~~Categories~~
 
-- News Categories
+- ~~News Categories~~
 
-###Highlights
+### Highlights
 
 - ContentBuilder (Text, Images, Cards, Teaser, Accordion)
 - Native Image Transform Twig Component with webp, lazyloading and srcset support

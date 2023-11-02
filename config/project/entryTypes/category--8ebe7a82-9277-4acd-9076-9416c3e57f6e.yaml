@@ -1,6 +1,5 @@
-defaultPlacement: end
 fieldLayouts:
-  4003219b-56f2-44e2-9781-639b120c251e:
+  1767ad6a-83d7-4543-9f77-4df118e54bf6:
     tabs:
       -
         elementCondition: null
@@ -27,20 +26,21 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
-            uid: 69ae1e6d-eb5d-4707-840a-acdb77b10510
+            uid: a38eaf5a-314e-4cc0-8560-8c5b1b2c6395
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 3ee88eb1-eb2a-4e92-9356-a12d8b1bedd9
+        uid: 6b58f5f7-33df-46ba-a26f-893ec3d48528
         userCondition: null
-handle: newsCats
-name: News
-siteSettings:
-  5a388334-4b50-4126-b1df-67227ce21818: # $SITE_NAME
-    hasUrls: false
-    template: null
-    uriFormat: null
-structure:
-  maxLevels: 1
-  uid: 0546f728-c0e4-46b8-8434-3031a00f2fac
+handle: category
+hasTitleField: true
+name: Category
+section: e5432242-1467-4a03-859f-d79e86e35bd3 # Categories
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

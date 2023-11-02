@@ -1,7 +1,10 @@
-dateModified: 1694168545
+dateModified: 1698914696
 elementSources:
   craft\elements\Entry:
     -
+      defaultSort:
+        - postDate
+        - desc
       disabled: false
       key: '*'
       tableAttributes:
@@ -20,6 +23,9 @@ elementSources:
       type: heading
     -
       key: 'section:3a7b0cff-9784-4566-82c7-8058d29810aa' # News
+      type: native
+    -
+      key: 'section:e5432242-1467-4a03-859f-d79e86e35bd3' # Categories
       type: native
     -
       heading: Structures
@@ -75,6 +81,7 @@ meta:
     5e67ea4e-bf13-4ee7-8e50-c46b0cd8e13a: Images # Images
     6d26ee64-a749-4528-b206-f147f95fd95e: 'Navigation - LInk' # Navigation - LInk
     6e7472e7-c63c-4447-a563-9988d447b8a5: Teaser # Teaser
+    8ebe7a82-9277-4acd-9076-9416c3e57f6e: Category # Category
     8fe74ac6-deb5-488c-ab7b-b527dc0bc970: 'Seo - Title' # Seo - Title
     9b27ba6a-ef2d-40c5-a5b8-26472818eb49: Items # Items
     13a95918-f4a2-4301-9a25-4816bccc6376: 'Preview Text' # Preview Text
@@ -113,19 +120,15 @@ meta:
     c4569bc2-0faa-4452-82f9-3344e307871e: Tags # Tags
     ce845487-a637-4e39-a2cf-8e7fbdb0b3e2: Button # Button
     d6d68433-69a8-40e3-b902-a9aa2a507b07: Text # Text
-    d71a42f3-d21a-46fc-9d2d-3d62f1fb78da: News # News
     d50431c7-2899-4e67-98c4-0edd8caa49ec: Builders # Builders
     e3cc550c-fc28-4ee9-9be6-7ef998d866a9: Teaser # Teaser
     e32e036d-dfaf-4b3d-8960-a0cdbbffa97b: 'Image Right' # Image Right
+    e5432242-1467-4a03-859f-d79e86e35bd3: Categories # Categories
     faa291e4-344c-4482-a847-09ab3f85bee6: Home # Home
     fdded62b-4ab7-45a4-890f-871e91405d57: Headline # Headline
     ffe769e6-5c30-464b-a3fd-048e7701e1f0: Geoman # Geoman
 plugins:
   elements-panel:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  empty-coalesce:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0

@@ -2,11 +2,7 @@
 
 {% block main %}
   {% cache using key "entry__" ~ craft.app.request.pathInfo %}
-    {% do craft.app.elements.eagerLoadElements(
-      className(entry),
-      [entry],
-      [''] | merge(eagerLoading.blocks ??? '')
-    ) %}
+    {% do craft.app.elements.eagerLoadElements(className(entry), [entry], [""]|merge(eagerLoading.blocks ?? "")) %}
 
     {% set blocks = entry.blocks.collect() %}
 

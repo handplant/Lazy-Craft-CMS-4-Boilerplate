@@ -6,20 +6,30 @@ instructions: null
 name: 'News - Category'
 searchable: false
 settings:
-  allowLimit: false
-  allowMultipleSources: false
   allowSelfRelations: false
   branchLimit: 1
   localizeRelations: false
+  maintainHierarchy: true
   maxRelations: null
   minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
   selectionLabel: null
   showSiteMenu: true
-  source: 'group:d71a42f3-d21a-46fc-9d2d-3d62f1fb78da' # News
-  sources: '*'
+  sources:
+    - 'section:e5432242-1467-4a03-859f-d79e86e35bd3' # Categories
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null
 translationKeyFormat: null
 translationMethod: site
-type: craft\fields\Categories
+type: craft\fields\Entries

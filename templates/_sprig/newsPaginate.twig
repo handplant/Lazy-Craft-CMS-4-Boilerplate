@@ -1,88 +1,99 @@
-{% set page = page ??? craft.app.request.pageNum ??? 1 %}
+{% set page = page ?? craft.app.request.pageNum ?? 1 %}
 {% set offset = offset ?? 0 %}
-{% set cat = cat ?? '' %}
-{% set categories = craft.categories().group('newsCats').collect() ?? null %}
+{% set cat = cat ?? "" %}
+{% set categories = craft.entries.section("categories").all() ?? null %}
 {% set template = template ?? "pagination" %}
 
 {% if template == "pagination" %}
-  {% do sprig.pushUrl('/' ~ entryUri ~ '/' ~ craft.app.config.general.pageTrigger ~ page ~ '?' ~ 'cat=' ~ cat ) %}
+  {% do sprig.pushUrl("/" ~ entryUri ~ "/" ~ craft.app.config.general.pageTrigger ~ page ~ "?" ~ "cat=" ~ cat) %}
 {% else %}
-  {% do sprig.pushUrl('/' ~ entryUri ~ '?' ~ 'cat=' ~ cat ) %}
+  {% do sprig.pushUrl("/" ~ entryUri ~ "?" ~ "cat=" ~ cat) %}
 {% endif %}
 
-{% cache using key craft.app.request.pathInfo ~ 'overviewNews-' ~ section ~ '-' ~ page ~ '-cat-' ~ cat  %}
-    {% set entryQuery = craft.entries
-      .section(section)
-      .with(['image', 'newsRelatedCat'])
-      .limit(limit)
-      .orderBy('date DESC') %}
+{% cache using key craft.app.request.pathInfo ~ "overviewNews-" ~ section ~ "-" ~ page ~ "-cat-" ~ cat %}
+  {% set entryQuery =
+    craft.entries.section(section).with(["image", "newsRelatedCat"]).limit(limit).orderBy("date DESC")
+  %}
 
-    {% if cat %}
-        {% do entryQuery.andRelatedTo(craft.categories.slug(cat).collect().first()) %}
-    {% endif %}
+  {% if cat %}
+    {% do entryQuery.relatedTo(craft.entries.section("categories").slug(cat).one()) %}
+  {% endif %}
 
-    {% if template == 'loadmore' %}
-      {% set entryQuery = entryQuery.offset(offset) %}
-    {% endif %}
+  {% if template == "loadmore" %}
+    {% set entryQuery = entryQuery.offset(offset) %}
+  {% endif %}
 
-    {# Paginates the entry query given the current page #}
-    {% set pageInfo = sprig.paginate(entryQuery, page) %}
-    {% set entries = pageInfo.pageResults %}
+  {# Paginates the entry query given the current page #}
+  {% set pageInfo = sprig.paginate(entryQuery, page) %}
+  {% set entries = pageInfo.pageResults %}
 
-    <div class="{{ style.blocks.xl }}">
-      <div class="max-w-screen-md px-4 pt-4 mx-auto mb-16 text-center xl:max-w-screen-lg">
-        <div class="inline-flex items-center space-x-4">
-            <select sprig s-indicator="#counter" value="{{cat}}" name="cat" id="cat" class="inline-block px-4 py-2 pr-10 text-lg font-bold border-4 border-gray-200 rounded-md shadow-sm appearance-none dark:border-gray-500 form-select font-head focus:outline-none focus:border-alpha-300 dark:focus:ring-alpha-400 focus:ring-4 focus:ring-alpha-200 focus:ring-opacity-50">
-                <option value="">Show all</option>
-                {% for item in categories %}
-                    <option value="{{item.slug}}" {{ cat == item.slug ? 'selected' }}>{{item.title}}</option>
-                {% endfor %}
-            </select>
-            <div id="counter" class="relative w-12 h-12 text-center ">
-                <span class="inline-flex items-center justify-center w-12 h-12 font-bold rounded-full bg-beta-300 font-head dark:text-gray-900">
-                {% if sprig.isRequest %}
-                    {{entryQuery.count()}}
-                {% else %}
-                    {{entryQuery.count()}}
-                {% endif %}
-                </span>
-                <span class="absolute inset-0 z-10 htmx-loader">
-                    <svg class="inline-flex w-full h-full text-beta animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                </span>
-            </div>
+  <div class="{{ style.blocks.xl }}">
+    <div class="max-w-screen-md px-4 pt-4 mx-auto mb-16 text-center xl:max-w-screen-lg">
+      <div class="inline-flex items-center space-x-4">
+        <select sprig
+          s-indicator="#counter"
+          value="{{ cat }}"
+          name="cat"
+          id="cat"
+          class="inline-block px-4 py-2 pr-10 text-lg font-bold border-4 border-gray-200 rounded-md shadow-sm appearance-none dark:border-gray-500 form-select font-head focus:outline-none focus:border-alpha-300 dark:focus:ring-alpha-400 focus:ring-4 focus:ring-alpha-200 focus:ring-opacity-50">
+          <option value="">
+            Show all
+          </option>
+          {% for item in categories %}
+            <option value="{{ item.slug }}" {{ cat == item.slug ? "selected" }}>
+              {{ item.title }}
+            </option>
+          {% endfor %}
+        </select>
+        <div id="counter" class="relative w-12 h-12 text-center">
+          <span class="inline-flex items-center justify-center w-12 h-12 font-bold rounded-full bg-beta-300 font-head dark:text-gray-900">
+            {% if sprig.isRequest %}
+              {{ entryQuery.count() }}
+            {% else %}
+              {{ entryQuery.count() }}
+            {% endif %}
+          </span>
+          <span class="absolute inset-0 z-10 htmx-loader">
+            <svg class="inline-flex w-full h-full text-beta animate-spin"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+          </span>
         </div>
-    </div>
-
-      <div id="results" class="grid gap-8 lg:grid-cols-3">
-        {% for item in entries %}
-          {% include('_components/card.twig') with {
-            data: {
-              topline: item.newsRelatedCat.collect().first() ?? '',
-              headline: item.title,
-              text: item.teaser,
-              date: item.date,
-              image: item.image.collect().first() ?? null,
-              button: item.getUrl(),
-              classRichText: style.richText.sm,
-            }
-          } only %}
-        {% endfor %}
       </div>
-
-      {% include('_sprig/'~template~'.twig') with {
-        data: {
-          info: pageInfo,
-          page: page,
-          count: entryQuery.count(),
-          offset: offset,
-          limit: limit,
-          entries: entries,
-          entryUri: entryUri
-        }
-      } only %}
     </div>
 
+    <div id="results" class="grid gap-8 lg:grid-cols-3">
+      {% for item in entries %}
+        {% include "_components/card.twig" with {
+          data: {
+            topline: item.newsRelatedCat.collect().first() ?? "",
+            headline: item.title,
+            text: item.teaser,
+            date: item.date,
+            image: item.image.collect().first() ?? null,
+            button: item.getUrl(),
+            classRichText: style.richText.sm
+          }
+        } only %}
+      {% endfor %}
+    </div>
+
+    {% include "_sprig/" ~ template ~ ".twig" with {
+      data: {
+        info: pageInfo,
+        page: page,
+        count: entryQuery.count(),
+        offset: offset,
+        limit: limit,
+        entries: entries,
+        entryUri: entryUri
+      }
+    } only %}
+  </div>
 {% endcache %}

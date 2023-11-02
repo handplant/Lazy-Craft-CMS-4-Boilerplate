@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7699cefe931664b5a866bb1940caadba",
+    "content-hash": "d62545a17120631c1418d59bae649c10",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1651,60 +1651,6 @@
             "time": "2023-04-19T08:25:22+00:00"
         },
         {
-            "name": "misterbk/mix",
-            "version": "1.6.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mister-bk/craft-plugin-mix/zipball/70241a5a5ae02bcfd1d94a7f93fa455869e825ff",
-                "reference": "70241a5a5ae02bcfd1d94a7f93fa455869e825ff",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^4.0.0-alpha"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Mix",
-                "handle": "mix",
-                "schemaVersion": "1.0.0",
-                "developerEmail": "dev@mister-bk.de",
-                "documentationUrl": "https://github.com/mister-bk/craft-plugin-mix/blob/master/README.md",
-                "changelogUrl": "https://raw.githubusercontent.com/mister-bk/craft-plugin-mix/master/CHANGELOG.md",
-                "downloadUrl": "https://github.com/mister-bk/craft-plugin-mix/archive/master.zip",
-                "hasCpSettings": true,
-                "hasCpSection": false,
-                "components": {
-                    "mix": "misterbk\\mix\\services\\MixService"
-                },
-                "class": "misterbk\\mix\\Mix"
-            },
-            "autoload": {
-                "psr-4": {
-                    "misterbk\\mix\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "mister bk! GmbH",
-                    "email": "info@mister-bk.de",
-                    "homepage": "https://www.mister-bk.de/"
-                }
-            ],
-            "description": "Helper plugin for Laravel Mix in Craft CMS templates",
-            "keywords": [
-                "craft",
-                "craft-plugin",
-                "craft4",
-                "craftcms",
-                "laravel-mix",
-                "mix"
-            ],
-            "time": "2022-07-06T16:42:11+00:00"
-        },
-        {
             "name": "moneyphp/money",
             "version": "v4.2.0",
             "dist": {
@@ -1870,56 +1816,6 @@
                 "twig"
             ],
             "time": "2023-08-16T02:31:19+00:00"
-        },
-        {
-            "name": "nystudio107/craft-emptycoalesce",
-            "version": "4.0.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-emptycoalesce/zipball/4c63741b2baef5ca032e441b022b4d19ff8089b8",
-                "reference": "4c63741b2baef5ca032e441b022b4d19ff8089b8",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^4.0.0-beta.1"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "class": "nystudio107\\emptycoalesce\\EmptyCoalesce",
-                "handle": "empty-coalesce",
-                "name": "Empty Coalesce"
-            },
-            "autoload": {
-                "psr-4": {
-                    "nystudio107\\emptycoalesce\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "nystudio107",
-                    "homepage": "https://nystudio107.com/"
-                }
-            ],
-            "description": "Empty Coalesce adds the ??? operator to Twig that will return the first thing that is defined, not null, and not empty.",
-            "keywords": [
-                "coalesce",
-                "coalescing",
-                "craft-plugin",
-                "craft3",
-                "craftcms",
-                "empty",
-                "operator",
-                "twig"
-            ],
-            "support": {
-                "docs": "https://nystudio107.com/docs/empty-coalesce/",
-                "issues": "https://nystudio107.com/plugins/empty-coalesce/support",
-                "source": "https://github.com/nystudio107/craft-emptycoalesce"
-            },
-            "time": "2022-08-05T15:55:28+00:00"
         },
         {
             "name": "nystudio107/craft-plugin-vite",
