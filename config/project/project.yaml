@@ -1,4 +1,4 @@
-dateModified: 1698914696
+dateModified: 1698917912
 elementSources:
   craft\elements\Entry:
     -
@@ -68,6 +68,7 @@ fs:
     url: $SITE_IMAGES_URL
 meta:
   __names__:
+    1d9bc5dd-4bbd-4783-8a57-3b3078e38657: Advanced # Advanced
     1e3282cf-612c-4d04-b4f6-02ec0ef60e78: Title # Title
     3a7b0cff-9784-4566-82c7-8058d29810aa: News # News
     3c6fb20b-47c2-4dad-bdb3-f488a2681c30: 'Video URL' # Video URL
@@ -121,6 +122,7 @@ meta:
     ce845487-a637-4e39-a2cf-8e7fbdb0b3e2: Button # Button
     d6d68433-69a8-40e3-b902-a9aa2a507b07: Text # Text
     d50431c7-2899-4e67-98c4-0edd8caa49ec: Builders # Builders
+    e02c8ed2-4f94-4a1b-9be5-0fb445706b91: Simple # Simple
     e3cc550c-fc28-4ee9-9be6-7ef998d866a9: Teaser # Teaser
     e32e036d-dfaf-4b3d-8960-a0cdbbffa97b: 'Image Right' # Image Right
     e5432242-1467-4a03-859f-d79e86e35bd3: Categories # Categories
@@ -128,14 +130,14 @@ meta:
     fdded62b-4ab7-45a4-890f-871e91405d57: Headline # Headline
     ffe769e6-5c30-464b-a3fd-048e7701e1f0: Geoman # Geoman
 plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
   elements-panel:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  redactor:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.3.0
   seomate:
     edition: standard
     enabled: true

@@ -31,7 +31,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 514576593
+      changedFieldIndicator: 737666618
       columns:
         __assoc__:
           -
@@ -71,7 +71,7 @@ fields:
       selectionLabel: null
       staticField: null
     translationKeyFormat: null
-    translationMethod: site
+    translationMethod: none
     type: verbb\supertable\fields\SuperTableField
 handle: blockCards
 name: Cards

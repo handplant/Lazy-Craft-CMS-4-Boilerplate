@@ -42,7 +42,8 @@ Check `Vite.js` and [vitejs Documentation](https://vitejs.dev/) for more Informa
 
 - [Elements Panel](https://plugins.craftcms.com/elements-panel?craft4)
 - [Vite](https://plugins.craftcms.com/vite?craft4)
-- [Redactor](https://plugins.craftcms.com/redactor?craft4)
+- ~~[Redactor](https://plugins.craftcms.com/redactor?craft4)~~
+- [CKEditor](https://plugins.craftcms.com/ckeditor?craft4) 
 - [Seomate](https://plugins.craftcms.com/seomate?craft4)
 - [Sprig](https://plugins.craftcms.com/sprig?craft4)
 - [Super Table](https://plugins.craftcms.com/super-table?craft4)

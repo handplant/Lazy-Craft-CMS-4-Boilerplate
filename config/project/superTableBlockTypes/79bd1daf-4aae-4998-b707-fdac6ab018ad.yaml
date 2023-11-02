@@ -1,3 +1,4 @@
+changedFieldIndicator: 69839944
 field: 9b27ba6a-ef2d-40c5-a5b8-26472818eb49 # Items
 fieldLayouts:
   c15ce293-5c32-4eaf-8bcd-5ded4eed54a5:
@@ -62,22 +63,18 @@ fields:
     name: Text
     searchable: false
     settings:
-      availableTransforms: '*'
+      availableTransforms: ''
       availableVolumes: ''
+      ckeConfig: 1d9bc5dd-4bbd-4783-8a57-3b3078e38657 # Advanced
       columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
       purifierConfig: null
       purifyHtml: true
-      redactorConfig: Advanced.json
-      removeEmptyTags: false
-      removeInlineStyles: false
-      removeNbsp: false
-      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      uiMode: enlarged
+      showWordCount: false
+      wordLimit: null
     translationKeyFormat: null
     translationMethod: none
-    type: craft\redactor\Field
+    type: craft\ckeditor\Field
