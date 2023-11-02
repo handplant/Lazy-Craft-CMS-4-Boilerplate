@@ -5,7 +5,7 @@
     {% do craft.app.elements.eagerLoadElements(
       className(entry),
       [entry],
-      ["image", "newsRelatedCat"]|merge(eagerLoading.blocks ?? "")
+      ["image", "newsRelatedCat"]|merge(_globals.get("eagerLoading") ?? "")
     ) %}
 
     {% set blocks = entry.blocks.collect() %}
@@ -20,7 +20,11 @@
       blocks: blocks
     } %}
 
-    <div class="flex {{ prevEntry and nextEntry ? "justify-between" : "justify-end" }} {{ style.blocks.lg }}">
+    <div class="flex {{ prevEntry and nextEntry ? "justify-between" : "justify-end" }} {{
+      _globals.get(
+        "blocksLarge"
+      )
+      }}">
       {% if prevEntry %}
         <a class="self-start btn btn--outline" href="{{ prevEntry.url }}">
           <svg xmlns="http://www.w3.org/2000/svg"

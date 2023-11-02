@@ -7,4 +7,4 @@ ${r?'Expression: "'+r+`"
             entryCount(section: "news")
           }
           `,variables:{}})}).then(e=>e.json()).then(e=>{this.count=e.data.entryCount,console.log(e.data.entryCount)})}}));On.start();
-//# sourceMappingURL=app-aaad7445.js.map
+//# sourceMappingURL=app-30344950.js.map

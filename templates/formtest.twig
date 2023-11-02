@@ -2,18 +2,18 @@
 
 {% block main %}
   <header class="pb-10 blocks blocks--transparent">
-    <div class="{{ style.blocks.md }}">
+    <div class="{{ _globals.get('blocksMedium') }}">
       <h1 class="text-3xl font-bold tracking-tight text-center text-gray-900 dark:text-gray-100 sm:text-4xl">
         Tailwind Forms
       </h1>
 
-      <div class="{{ style.richText.intro }} text-center text-gray-500 mt-6">
+      <div class="{{ _globals.get('richTextIntro') }} text-center text-gray-500 mt-6">
         This form does not have any function.
       </div>
     </div>
   </header>
   <section class="blocks blocks--transparent">
-    <div class="{{ style.blocks.lg }}">
+    <div class="{{ _globals.get('blocksLarge') }}">
       <form class="space-y-8 divide-y divide-gray-200 dark:divide-gray-600">
         <div class="space-y-8 divide-y divide-gray-200 dark:divide-gray-600">
           <div>

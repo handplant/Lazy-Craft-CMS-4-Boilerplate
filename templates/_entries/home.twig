@@ -2,7 +2,11 @@
 
 {% block main %}
   {% cache using key "entry__home" %}
-    {% do craft.app.elements.eagerLoadElements(className(entry), [entry], [""]|merge(eagerLoading.blocks ?? "")) %}
+    {% do craft.app.elements.eagerLoadElements(
+      className(entry),
+      [entry],
+      [""]|merge(_globals.get("eagerLoading") ?? "")
+    ) %}
 
     {% set blocks = entry.blocks.collect() %}
 
@@ -10,7 +14,7 @@
 
     {% include "_partials/newsCounter" %}
 
-    <div class="{{ style.blocks.md }}">
+    <div class="{{ _globals.get("blocksMedium") }}">
       {{ sprig("_sprig/search") }}
     </div>
 
