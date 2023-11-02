@@ -42,25 +42,21 @@ fields:
     name: Caption
     searchable: false
     settings:
-      availableTransforms: '*'
+      availableTransforms: ''
       availableVolumes: ''
+      ckeConfig: e02c8ed2-4f94-4a1b-9be5-0fb445706b91 # Simple
       columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
       purifierConfig: null
       purifyHtml: true
-      redactorConfig: Simple.json
-      removeEmptyTags: false
-      removeInlineStyles: false
-      removeNbsp: false
-      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      uiMode: enlarged
+      showWordCount: false
+      wordLimit: null
     translationKeyFormat: null
     translationMethod: none
-    type: craft\redactor\Field
+    type: craft\ckeditor\Field
   75495664-81c9-48dd-b3eb-0f1f2c24fa80: # Images
     columnSuffix: null
     contentColumnType: string
@@ -74,9 +70,11 @@ fields:
       allowSubfolders: false
       allowUploads: true
       allowedKinds: null
+      branchLimit: null
       defaultUploadLocationSource: 'volume:5b1d9baa-f1c8-4462-8c42-dc7b3ebc3a4e' # Images
       defaultUploadLocationSubpath: null
       localizeRelations: false
+      maintainHierarchy: false
       maxRelations: null
       minRelations: null
       previewMode: full
@@ -100,7 +98,6 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      source: null
       sources:
         - 'volume:5b1d9baa-f1c8-4462-8c42-dc7b3ebc3a4e' # Images
       targetSiteId: null

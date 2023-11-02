@@ -1,3 +1,4 @@
+changedFieldIndicator: 1765009355
 field: 832e06b7-23a1-43f1-9195-d9799aeeb7a2 # Cards
 fieldLayouts:
   c9d9a027-e844-46e6-84ef-ffd7c014e236:
@@ -90,9 +91,11 @@ fields:
       allowSubfolders: false
       allowUploads: true
       allowedKinds: null
+      branchLimit: null
       defaultUploadLocationSource: 'volume:5b1d9baa-f1c8-4462-8c42-dc7b3ebc3a4e' # Images
       defaultUploadLocationSubpath: null
       localizeRelations: false
+      maintainHierarchy: false
       maxRelations: 1
       minRelations: null
       previewMode: full
@@ -116,7 +119,6 @@ fields:
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      source: null
       sources:
         - 'volume:5b1d9baa-f1c8-4462-8c42-dc7b3ebc3a4e' # Images
       targetSiteId: null
@@ -197,22 +199,18 @@ fields:
     name: Text
     searchable: false
     settings:
-      availableTransforms: '*'
+      availableTransforms: ''
       availableVolumes: ''
+      ckeConfig: e02c8ed2-4f94-4a1b-9be5-0fb445706b91 # Simple
       columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
       purifierConfig: null
       purifyHtml: true
-      redactorConfig: Simple.json
-      removeEmptyTags: false
-      removeInlineStyles: false
-      removeNbsp: false
-      showHtmlButtonForNonAdmins: false
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      uiMode: enlarged
+      showWordCount: false
+      wordLimit: null
     translationKeyFormat: null
     translationMethod: none
-    type: craft\redactor\Field
+    type: craft\ckeditor\Field

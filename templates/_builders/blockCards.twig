@@ -1,5 +1,5 @@
 <section class="blocks blocks--transparent">
-  <div class="{{ style.blocks["xl"] }}">
+  <div class="{{ _globals.get("blocksExtraLarge") }}">
     <div class="grid gap-6 lg:grid-cols-3">
       {% for card in self.cards.with({
         with: ["image"]

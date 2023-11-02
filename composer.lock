@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d62545a17120631c1418d59bae649c10",
+    "content-hash": "4a6a8b5d119a6c38524563a2abebcea7",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -490,6 +490,58 @@
             "time": "2022-02-25T21:32:43+00:00"
         },
         {
+            "name": "craftcms/ckeditor",
+            "version": "3.6.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/69a76a6ec028a4ca93962f47e23bc3f3bb15417e",
+                "reference": "69a76a6ec028a4ca93962f47e23bc3f3bb15417e",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.5.0-beta.2",
+                "craftcms/html-field": "^2.0.0-alpha.2",
+                "nystudio107/craft-code-editor": "^1.0.8",
+                "php": "^8.0.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "CKEditor",
+                "handle": "ckeditor",
+                "documentationUrl": "https://github.com/craftcms/ckeditor/blob/master/README.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\ckeditor\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Edit rich text content in Craft CMS using CKEditor.",
+            "keywords": [
+                "ckeditor",
+                "cms",
+                "craftcms",
+                "html",
+                "yii2"
+            ],
+            "support": {
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/ckeditor/issues?state=open",
+                "source": "https://github.com/craftcms/ckeditor",
+                "docs": "https://github.com/craftcms/ckeditor/blob/master/README.md",
+                "rss": "https://github.com/craftcms/ckeditor/commits/master.atom"
+            },
+            "time": "2023-09-13T15:54:45+00:00"
+        },
+        {
             "name": "craftcms/cms",
             "version": "4.5.9",
             "dist": {
@@ -587,15 +639,14 @@
         },
         {
             "name": "craftcms/html-field",
-            "version": "2.0.6",
+            "version": "2.0.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/html-field/zipball/3030f7878335b8c7163b1db354fdc22c083d131c",
-                "reference": "3030f7878335b8c7163b1db354fdc22c083d131c",
+                "url": "https://api.github.com/repos/craftcms/html-field/zipball/4797c9cb0397e6d69d25d9716a75f7b47c69fd3a",
+                "reference": "4797c9cb0397e6d69d25d9716a75f7b47c69fd3a",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^4.0.0-alpha.1",
                 "php": "^8.0.2"
             },
             "type": "library",
@@ -621,7 +672,7 @@
                 "docs": "https://github.com/craftcms/html-field/blob/main/README.md",
                 "rss": "https://github.com/craftcms/html-field/commits/main.atom"
             },
-            "time": "2022-11-16T11:13:37+00:00"
+            "time": "2023-09-17T11:24:51+00:00"
         },
         {
             "name": "craftcms/plugin-installer",

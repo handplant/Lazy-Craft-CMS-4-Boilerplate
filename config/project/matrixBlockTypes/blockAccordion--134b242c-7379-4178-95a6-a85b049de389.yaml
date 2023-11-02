@@ -31,7 +31,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 1465139655
+      changedFieldIndicator: 289137278
       columns:
         __assoc__:
           -
@@ -57,7 +57,7 @@ fields:
       selectionLabel: null
       staticField: null
     translationKeyFormat: null
-    translationMethod: site
+    translationMethod: none
     type: verbb\supertable\fields\SuperTableField
 handle: blockAccordion
 name: Accordion

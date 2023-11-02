@@ -1,0 +1,22 @@
+headingLevels:
+  - 2
+  - 3
+  - 4
+listPlugin: List
+name: Advanced
+options:
+  code:
+    indentSequence: '  '
+toolbar:
+  - sourceEditing
+  - undo
+  - redo
+  - '|'
+  - heading
+  - '|'
+  - bold
+  - italic
+  - bulletedList
+  - numberedList
+  - link
+  - horizontalLine
