@@ -1,0 +1,15 @@
+{
+  "src/css/app.css": {
+    "file": "assets/css-BISli4Xz.css",
+    "src": "src/css/app.css",
+    "isEntry": true
+  },
+  "src/js/app.js": {
+    "file": "assets/app-USXD46Rd.js",
+    "src": "src/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/css-BISli4Xz.css"
+    ]
+  }
+}

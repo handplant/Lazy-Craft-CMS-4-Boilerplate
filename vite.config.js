@@ -1,32 +1,28 @@
-import { defineConfig } from 'vite';
-import ViteRestart from 'vite-plugin-restart';
-import viteCompression from 'vite-plugin-compression';
+import { defineConfig } from 'vite'
+import ViteRestart from 'vite-plugin-restart'
 
 export default defineConfig(({ command }) => ({
   base: command === 'serve' ? '' : '/dist/',
 
   build: {
+    app: 'src/js/app.js',
     emptyOutDir: true,
     manifest: true,
     outDir: 'web/dist/',
+    sourcemap: true,
+
     rollupOptions: {
       input: {
         app: 'src/js/app.js',
-      },
-      output: {
-        sourcemap: true,
+        css: 'src/css/app.css',
       },
     },
   },
 
   plugins: [
-    // The restart plugin allows Vite to refresh pages when Twig files change
     ViteRestart({
       reload: ['templates/**/*'],
-    }),
-    viteCompression({
-      filter: /\.(js|mjs|json|css|map)$/i,
-    }),
+    })
   ],
 
   // Anything in publicDir will be copied into web/dist during `npm run build`
@@ -38,4 +34,4 @@ export default defineConfig(({ command }) => ({
     port: 3000,
     strictPort: true,
   },
-}));
+}))

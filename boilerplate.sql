@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.33, for macos13.3 (arm64)
+-- MySQL dump 10.13  Distrib 8.3.0, for macos14.2 (arm64)
 --
 -- Host: localhost    Database: boilerplate
 -- ------------------------------------------------------
--- Server version	8.0.33
+-- Server version	8.3.0
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -1822,12 +1822,12 @@ CREATE TABLE `widgets` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-02 10:42:00
--- MySQL dump 10.13  Distrib 8.0.33, for macos13.3 (arm64)
+-- Dump completed on 2024-03-18 14:06:38
+-- MySQL dump 10.13  Distrib 8.3.0, for macos14.2 (arm64)
 --
 -- Host: localhost    Database: boilerplate
 -- ------------------------------------------------------
--- Server version	8.0.33
+-- Server version	8.3.0
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -2140,7 +2140,7 @@ commit;
 LOCK TABLES `gqltokens` WRITE;
 /*!40000 ALTER TABLE `gqltokens` DISABLE KEYS */;
 set autocommit=0;
-INSERT INTO `gqltokens` VALUES (1,'Public Token','__PUBLIC__',1,NULL,'2023-11-02 09:40:02',NULL,'2022-09-01 14:16:21','2023-11-02 09:40:03','bda84672-2395-4578-bd39-ca46748a13fb');
+INSERT INTO `gqltokens` VALUES (1,'Public Token','__PUBLIC__',1,NULL,'2024-03-18 13:06:26',NULL,'2022-09-01 14:16:21','2024-03-18 13:06:26','bda84672-2395-4578-bd39-ca46748a13fb');
 /*!40000 ALTER TABLE `gqltokens` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -2163,7 +2163,7 @@ commit;
 LOCK TABLES `info` WRITE;
 /*!40000 ALTER TABLE `info` DISABLE KEYS */;
 set autocommit=0;
-INSERT INTO `info` VALUES (1,'4.5.9','4.5.3.0',0,'tuthnmybfwss','3@kcrgtulljp','2022-09-01 09:21:58','2023-11-02 09:38:32','9fa7b03c-b678-4390-92fa-1a83648760d3');
+INSERT INTO `info` VALUES (1,'4.8.3','4.5.3.0',0,'tuthnmybfwss','3@kcrgtulljp','2022-09-01 09:21:58','2024-03-18 13:04:34','9fa7b03c-b678-4390-92fa-1a83648760d3');
 /*!40000 ALTER TABLE `info` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -2247,7 +2247,7 @@ commit;
 LOCK TABLES `plugins` WRITE;
 /*!40000 ALTER TABLE `plugins` DISABLE KEYS */;
 set autocommit=0;
-INSERT INTO `plugins` VALUES (9,'seomate','2.1.2','1.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-06-19 10:29:29','475dbdd4-2a80-4049-8ca7-a0a862fadf1e'),(11,'sprig','2.7.2','1.0.1','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-11-02 08:30:06','be68e102-398b-455a-8ddc-2c2e242e3049'),(12,'super-table','3.0.12','3.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-11-02 08:30:06','8a29a512-a8e8-450e-9378-36bfbd617527'),(13,'typedlinkfield','2.1.5','2.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-04-03 11:03:57','f12d75aa-e3f1-43da-99ab-fde4a113b422'),(14,'elements-panel','2.0.0','1.0.0','2022-09-02 09:53:14','2022-09-02 09:53:14','2023-04-03 11:03:57','2a6df948-53e2-43c4-a3de-939bb9891860'),(16,'vite','4.0.6','1.0.0','2023-09-08 10:22:25','2023-09-08 10:22:25','2023-09-08 10:22:25','800a45b8-52f9-44df-8dd9-8318f9974c16'),(17,'ckeditor','3.6.0','3.0.0.0','2023-11-02 09:21:04','2023-11-02 09:21:04','2023-11-02 09:21:04','6884e8dd-2cc0-4c8c-aa05-113f64f8b559');
+INSERT INTO `plugins` VALUES (9,'seomate','2.2.0','1.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2024-03-18 13:04:21','475dbdd4-2a80-4049-8ca7-a0a862fadf1e'),(11,'sprig','2.7.3','1.0.1','2022-09-01 09:21:58','2022-09-01 09:21:58','2024-03-18 13:04:21','be68e102-398b-455a-8ddc-2c2e242e3049'),(12,'super-table','3.0.12','3.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-11-02 08:30:06','8a29a512-a8e8-450e-9378-36bfbd617527'),(13,'typedlinkfield','2.1.5','2.0.0','2022-09-01 09:21:58','2022-09-01 09:21:58','2023-04-03 11:03:57','f12d75aa-e3f1-43da-99ab-fde4a113b422'),(14,'elements-panel','2.0.0','1.0.0','2022-09-02 09:53:14','2022-09-02 09:53:14','2023-04-03 11:03:57','2a6df948-53e2-43c4-a3de-939bb9891860'),(16,'vite','4.0.9','1.0.0','2023-09-08 10:22:25','2023-09-08 10:22:25','2024-03-18 13:04:21','800a45b8-52f9-44df-8dd9-8318f9974c16'),(17,'ckeditor','3.8.1','3.0.0.0','2023-11-02 09:21:04','2023-11-02 09:21:04','2024-03-18 13:04:21','6884e8dd-2cc0-4c8c-aa05-113f64f8b559');
 /*!40000 ALTER TABLE `plugins` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -2649,4 +2649,4 @@ commit;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-02 10:42:00
+-- Dump completed on 2024-03-18 14:06:39
